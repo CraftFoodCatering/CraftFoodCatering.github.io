@@ -1,3 +1,31 @@
-body{
-    
+$primary-color: #8DAF3E; //green
+$secondary-color: #814997;  // violett
+$font-color-light: #ffffff; //white
+$font-color-dark:#2D2D2D; //dark gray
+$background-color-dark: #2D2D2D; //dark gray
+$background-color-medium-dark: #5F5E5E; //light gray
+
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-dark{
+    background-color: $background-color-dark;
+}
+
+.bg-primary{
+    background-color: $primary-color;
+}
+
+.section-wrapper {
+  width: 100%;
+  padding: 50px 0;
+}
+
+.inner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }

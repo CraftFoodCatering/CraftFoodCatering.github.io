@@ -2,15 +2,17 @@
   "name": "craft-food-catering",
   "version": "1.0.0",
   "scripts": {
-    "build:css": "sass scss/styles.scss docs/styles/styles.css",
+    "build:css": "sass scss:docs/styles",
     "build:ts": "tsc",
-    "watch:css": "sass --watch scss/styles.scss:docs/styles/styles.css",
+    "watch:css": "sass --watch scss:docs/styles",
     "watch:ts": "tsc --watch",
-    "watch": "npm-run-all --parallel watch:css watch:ts"
+    "watch": "npm-run-all --parallel watch:css watch:ts",
+    "start": "live-server --watch=docs --open=docs/index.html"
   },
   "devDependencies": {
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
     "sass": "^1.79.4",
-    "typescript": "^5.6.2",
-    "npm-run-all": "^4.1.5"
+    "typescript": "^5.6.2"
   }
 }

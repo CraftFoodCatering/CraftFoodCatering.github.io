@@ -1,3 +1,26 @@
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
+.bg-dark {
+  background-color: #2D2D2D;
+}
+
+.bg-primary {
+  background-color: #8DAF3E;
+}
+
+.section-wrapper {
+  width: 100%;
+  padding: 50px 0;
+}
+
+.inner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 /*# sourceMappingURL=styles.css.map */
