@@ -2,25 +2,73 @@ body {
   font-family: "Quicksand", sans-serif;
   margin: 0;
   padding: 0;
+  font-size: 20px;
 }
 
 .bg-dark {
-  background-color: #2D2D2D;
+  background-color: #2d2d2d;
 }
 
 .bg-primary {
-  background-color: #8DAF3E;
+  background-color: #8daf3e;
 }
 
 .section-wrapper {
   width: 100%;
-  padding: 50px 0;
+  padding: 25px 0;
 }
 
 .inner-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.navigation-bar ul {
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 959px;
+}
+
+.navigation-bar ul li {
+  margin: 0 20px;
+}
+
+.navigation-bar ul .logo {
+  display: flex;
+  justify-content: center;
+}
+.navigation-bar ul .logo img {
+  width: 152px;
+  height: auto;
+}
+
+.navigation-bar ul a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.navigation-bar ul a:hover {
+  color: #8daf3e;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 58px;
+  border: none;
+  border-radius: 45px;
+  background-color: #814997;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #8daf3e;
+  color: #ffffff !important;
 }
 
 /*# sourceMappingURL=styles.css.map */
