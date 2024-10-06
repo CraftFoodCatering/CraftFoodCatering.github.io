@@ -2,9 +2,9 @@
   "name": "craft-food-catering",
   "version": "1.0.0",
   "scripts": {
-    "build:css": "sass docs/scss/styles.scss dist/styles.css",
+    "build:css": "sass scss/styles.scss docs/styles/styles.css",
     "build:ts": "tsc",
-    "watch:css": "sass --watch docs/scss/styles.scss:dist/styles.css",
+    "watch:css": "sass --watch scss/styles.scss:docs/styles/styles.css",
     "watch:ts": "tsc --watch",
     "watch": "npm-run-all --parallel watch:css watch:ts"
   },
