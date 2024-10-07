@@ -89,7 +89,7 @@ body {
 
 .image-section {
   grid-column: 2/4;
-  background-image: url("../assets/images/photos/quality-service-photo.png");
+  background-image: url("../assets/images/photos/quality-service-photo.jpg");
   background-size: cover;
   background-position: right;
   position: relative;
