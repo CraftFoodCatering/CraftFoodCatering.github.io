@@ -24,6 +24,10 @@ body {
   background-color: $secondary-color;
 }
 
+.border-bottom-white {
+  border-bottom: 16px solid $font-color-light;
+}
+
 .button {
   display: inline-block;
   padding: 14px 58px;
