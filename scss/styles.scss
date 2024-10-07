@@ -20,6 +20,21 @@ body {
   background-color: $primary-color;
 }
 
+.button {
+  display: inline-block;
+  padding: 14px 58px;
+  border: none;
+  border-radius: 45px;
+  background-color: $secondary-color;
+  color: $font-color-light;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background-color: $primary-color;
+    color: $font-color-light !important;
+  }
+}
+
 // #region LAYOUT
 .section-wrapper {
   width: 100%;
@@ -67,17 +82,49 @@ body {
 }
 // #endregion
 
-.button {
-  display: inline-block;
-  padding: 14px 58px;
-  border: none;
-  border-radius: 45px;
-  background-color: $secondary-color;
-  color: $font-color-light;
-  text-decoration: none;
-  cursor: pointer;
-  &:hover {
-    background-color: $primary-color;
-    color: $font-color-light !important;
-  }
+// #region INTRO BANNER
+.intro-banner {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 1200px) 1fr; /*left margin, inner container, right margin*/
+  width: 100%;
+  background-color: $primary-color;
+  height: 400px;
 }
+
+.image-section {
+  grid-column: 2 / 4;
+  background-image: url("../assets/images/photos/quality-service-photo.png");
+  background-size: cover;
+  background-position: right;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.text-content {
+  grid-column: 2;
+  color: $font-color-light;
+  padding-left: 63px;
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.image-section:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  min-width: 500px;
+  width: calc(50vw - 600px / 2);
+  background: linear-gradient(
+    to right,
+    #8daf3e 25%,
+    75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 0;
+}
+
+// #endregion

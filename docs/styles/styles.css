@@ -13,6 +13,21 @@ body {
   background-color: #8daf3e;
 }
 
+.button {
+  display: inline-block;
+  padding: 14px 58px;
+  border: none;
+  border-radius: 45px;
+  background-color: #814997;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #8daf3e;
+  color: #ffffff !important;
+}
+
 .section-wrapper {
   width: 100%;
   padding: 25px 0;
@@ -56,19 +71,43 @@ body {
   color: #8daf3e;
 }
 
-.button {
-  display: inline-block;
-  padding: 14px 58px;
-  border: none;
-  border-radius: 45px;
-  background-color: #814997;
-  color: #ffffff;
-  text-decoration: none;
-  cursor: pointer;
-}
-.button:hover {
+.intro-banner {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 1200px) 1fr; /*left margin, inner container, right margin*/
+  width: 100%;
   background-color: #8daf3e;
-  color: #ffffff !important;
+  height: 400px;
+}
+
+.image-section {
+  grid-column: 2/4;
+  background-image: url("../assets/images/photos/quality-service-photo.png");
+  background-size: cover;
+  background-position: right;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.text-content {
+  grid-column: 2;
+  color: #ffffff;
+  padding-left: 63px;
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.image-section:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  min-width: 500px;
+  width: calc(50vw - 300px);
+  background: linear-gradient(to right, #8daf3e 25%, 75%, rgba(255, 255, 255, 0) 100%);
+  z-index: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
