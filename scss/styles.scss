@@ -12,7 +12,7 @@ body {
   font-size: 20px;
 }
 
-p{
+p {
   color: $font-color-light;
 }
 
@@ -186,12 +186,12 @@ p{
   .gallery-text-container {
     padding: 127px 100px 60px 100px;
     background-color: $primary-color;
-    h1{
+    h1 {
       color: $font-color-dark;
       font-size: 70px;
       line-height: 70px;
     }
-    p{
+    p {
       font-weight: 600;
     }
   }
@@ -202,7 +202,6 @@ p{
 }
 
 // #endregion
-
 
 // #region CONTACT
 .contact-section {
@@ -224,8 +223,8 @@ p{
 .form-grid {
   padding-top: 90px;
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Two columns: one for labels, one for inputs */
-  gap: 42px 39px; /* Adjust gap between rows and columns */
+  grid-template-columns: 1fr 2fr;
+  gap: 42px 39px;
   max-width: 900px;
   align-items: center;
 
@@ -238,7 +237,7 @@ p{
       color: $primary-color;
       font-weight: 600;
       white-space: nowrap;
-      align-self: center; /* Vertically center the labels */
+      align-self: center;
     }
 
     input,
@@ -248,19 +247,19 @@ p{
       padding: 10px;
       background-color: rgba($primary-color, 0.3);
       color: $font-color-light;
-
+      font-size: 16px;
+      font-family: inherit;
       &::placeholder {
         color: rgba($font-color-light, 0.3) !important;
         font-size: inherit;
       }
       border: 1px solid $primary-color;
-      align-self: center; /* Vertically center the inputs */
+      align-self: center;
     }
 
-    // input[type="date"]::placeholder {
-    //   color: rgba($font-color-light, 0.3) !important;
-    //   font-size: inherit;
-    // }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1) saturate(5);
+    }
 
     input[type="submit"] {
       padding: 14px 58px;
@@ -279,7 +278,7 @@ p{
       }
     }
 
-    /* Additional styling for radio buttons */
+  
     .radio-group {
       display: flex;
       gap: 32px;
@@ -293,6 +292,7 @@ p{
 
       label {
         color: $font-color-light !important;
+        font-weight: 400;
       }
       input[type="radio"] {
         margin-right: 13px;
@@ -304,20 +304,20 @@ p{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 20px; /* Set a fixed width */
-        height: 20px; /* Set a fixed height */
-        border: 2px solid $primary-color; /* Add a border to simulate the radio button */
-        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        width: 20px;
+        height: 20px;
+        border: 1px solid $primary-color;
+        box-sizing: border-box;
       }
 
       input[type="radio"]:checked::before {
         content: '';
         display: block;
-        width: 50%;
-        height: 50%;
+        width: 30%;
+        height: 30%;
         background-color: $primary-color;
         border-radius: 50%;
-        position: absolute; /* Position it absolutely within the radio button */
+        position: absolute;
       }
     }
   }
