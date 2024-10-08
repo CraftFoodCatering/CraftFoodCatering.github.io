@@ -66,59 +66,62 @@
       <div class="gallery-image-container"></div>
     </div>
     <div class="contact-section">
-      <div class="contact-container form-container">
+      <div class="contact-container">
         <h1>Kontakt</h1>
         <p>
           Bitte füllen Sie das folgende Formular aus. Wir garantieren Ihnen
           höchste Qualität und bestes Catering.
         </p>
-        <form action="/submit_form" method="post" class="form-grid">
-          <div class="form-group">
-            <label for="date">Datum:</label>
-            <input type="date" id="date" name="date" required placeholder="TT.MM.JJJJ" />
-          </div>
-          <div class="form-group">
-            <label for="guestnumber">Anzahl der Gäste:</label>
-            <input type="number" id="guestnumber" name="guestnumber" required placeholder="z.B. 50" />
-          </div>
-          <div class="form-group">
-            <label for="fullname">Name:</label>
-            <input type="text" id="fullname" name="fullname" required placeholder="Ihr vollständiger Name" />
-          </div>
-          <div class="form-group">
-            <label for="email">E-Mail:</label>
-            <input type="email" id="email" name="email" required placeholder="Ihre E-Mail-Adresse" />
-          </div>
-          <div class="form-group">
-            <label for="phone">Telefonnummer:</label>
-            <input type="tel" id="phone" name="phone" required placeholder="Vorwahl und Telefonnummer" />
-          </div>
-          <div class="form-group">
-            <label>Wo:</label>
-            <div class="radio-group">
-              <div>
-                <input type="radio" id="indoor" name="location" value="indoor" required />
-                <label for="indoor">Innen</label>
-              </div>
-              <div>
-                <input type="radio" id="outdoor" name="location" value="outdoor" required />
-                <label for="outdoor">Außen</label>
-              </div>
-              <div>
-                <input type="radio" id="notsure" name="location" value="notsure" required />
-                <label for="notsure">Ich bin mir nicht sicher</label>
+        <div class="form-container">
+          <form action="/submit_form" method="post" class="form-grid">
+            <div class="form-group">
+              <label for="date">Datum:</label>
+              <input type="date" id="date" name="date" required placeholder="TT.MM.JJJJ" />
+            </div>
+            <div class="form-group">
+              <label for="guestnumber">Anzahl der Gäste:</label>
+              <input type="number" id="guestnumber" name="guestnumber" required placeholder="z.B. 50" />
+            </div>
+            <div class="form-group">
+              <label for="fullname">Name:</label>
+              <input type="text" id="fullname" name="fullname" required placeholder="Ihr vollständiger Name" />
+            </div>
+            <div class="form-group">
+              <label for="email">E-Mail:</label>
+              <input type="email" id="email" name="email" required placeholder="Ihre E-Mail-Adresse" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Telefonnummer:</label>
+              <input type="tel" id="phone" name="phone" required placeholder="Vorwahl und Telefonnummer" />
+            </div>
+            <div class="form-group">
+              <label>Wo:</label>
+              <div class="radio-group">
+                <div>
+                  <input type="radio" id="indoor" name="location" value="indoor" required />
+                  <label for="indoor">Innen</label>
+                </div>
+                <div>
+                  <input type="radio" id="outdoor" name="location" value="outdoor" required />
+                  <label for="outdoor">Außen</label>
+                </div>
+                <div>
+                  <input type="radio" id="notsure" name="location" value="notsure" required />
+                  <label for="notsure">Ich bin mir nicht sicher</label>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="additionalinfo">Weitere Wünsche:</label>
-            <textarea id="additionalinfo" name="additionalinfo" placeholder="Ihre zusätzlichen Wünsche oder Anforderungen"></textarea>
-          </div>
-          <div></div>
-          <div class="form-group">
-            <input type="submit" value="Absenden" />
-          </div>
-        </form>
+            <div class="form-group">
+              <label for="additionalinfo">Weitere Wünsche:</label>
+              <textarea id="additionalinfo" name="additionalinfo" placeholder="Ihre zusätzlichen Wünsche oder Anforderungen"></textarea>
+            </div>
+            <div></div>
+            <div class="form-group">
+              <input type="submit" value="Absenden" />
+            </div>
+          </form>
+        </div>
+
       </div>
     </div>
 

@@ -219,13 +219,15 @@ p {
     color: $font-color-light;
   }
 }
+.form-container{
+  max-width: 900px;
+}
 
 .form-grid {
   padding-top: 90px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 42px 39px;
-  max-width: 900px;
   align-items: center;
 
   .form-group {
@@ -243,7 +245,6 @@ p {
     input,
     select,
     textarea {
-      width: 100%;
       padding: 10px;
       background-color: rgba($primary-color, 0.3);
       color: $font-color-light;

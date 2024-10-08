@@ -189,12 +189,15 @@ p {
   color: #ffffff;
 }
 
+.form-container {
+  max-width: 900px;
+}
+
 .form-grid {
   padding-top: 90px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 42px 39px;
-  max-width: 900px;
   align-items: center;
 }
 .form-grid .form-group {
@@ -211,7 +214,6 @@ p {
 .form-grid .form-group input,
 .form-grid .form-group select,
 .form-grid .form-group textarea {
-  width: 100%;
   padding: 10px;
   background-color: rgba(141, 175, 62, 0.3);
   color: #ffffff;
