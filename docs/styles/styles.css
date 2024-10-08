@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Quicksand", sans-serif;
   margin: 0;
@@ -338,6 +339,9 @@ p {
   display: flex;
   gap: 10px;
   margin-top: 10px;
+}
+.footer-container .footer-follow-us .social-icons a:hover img {
+  filter: brightness(0) invert(1); /* Macht das Icon weiß */
 }
 .footer-container .footer-copyright {
   grid-column: 4;
