@@ -37,8 +37,7 @@
     </div>
 
     <div class="about-us-grid bg-secondary">
-      <div class="about-us-image">
-      </div>
+      <div class="about-us-image"></div>
       <div class="about-us-text-container">
         <h1>Über uns</h1>
         <p>
@@ -52,6 +51,74 @@
           et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
           takimata sanctus est Lorem ipsum dolor sit amet.
         </p>
+      </div>
+    </div>
+    <div class="gallery-section">
+      <div class="gallery-text-container">
+        <h1>Galerie</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero,
+          impedit consequatur reiciendis, saepe enim numquam sunt laudantium
+          alias iusto odit blanditiis ratione atque ab tempore officia?
+          Repellendus, eligendi. Illum, similique?
+        </p>
+      </div>
+      <div class="gallery-image-container"></div>
+    </div>
+    <div class="contact-section">
+      <div class="contact-container form-container">
+        <h1>Kontakt</h1>
+        <p>
+          Bitte füllen Sie das folgende Formular aus. Wir garantieren ihnen
+          höchste Qualität und bestes Catering.
+        </p>
+        <form action="/submit_form" method="post" class="form-grid">
+          <div class="form-group">
+            <label for="date">Datum:</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="guestnumber">Anzahl der Gäste:</label>
+            <input type="number" id="guestnumber" name="guestnumber" required />
+          </div>
+          <div class="form-group">
+            <label for="fullname">Vollständiger Name:</label>
+            <input type="text" id="fullname" name="fullname" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefonnummer:</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label>Wo:</label>
+            <div class="radio-group">
+              <div>
+                <input type="radio" id="indoor" name="location" value="indoor" required />
+                <label for="indoor">Innen</label>
+              </div>
+              <div>
+                <input type="radio" id="outdoor" name="location" value="outdoor" required />
+                <label for="outdoor">Außen</label>
+              </div>
+              <div>
+                <input type="radio" id="outdoor" name="location" value="notsure" required />
+                <label for="outdoor">Ich bin nicht sicher</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="additionalinfo">Weitere Wünsche:</label>
+            <textarea id="additionalinfo" name="additionalinfo"></textarea>
+          </div>
+          <div></div>
+          <div class="form-group">
+            <input type="submit" value="Absenden" />
+          </div>
+        </form>
       </div>
     </div>
   </body>

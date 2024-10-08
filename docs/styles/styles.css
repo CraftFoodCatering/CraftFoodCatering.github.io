@@ -3,8 +3,10 @@ body {
   margin: 0;
   padding: 0;
   font-size: 20px;
-  height: 100%;
-  width: 100%;
+}
+
+p {
+  color: #ffffff;
 }
 
 .bg-dark {
@@ -134,14 +136,10 @@ body {
   background-size: cover;
 }
 
-
-
 .about-us-text-container {
-  color: #ffffff;
   font-weight: 600;
   padding: 141px 84px 157px 77px;
 }
-
 .about-us-text-container h1 {
   color: #8daf3e;
   font-size: 70px;
@@ -151,6 +149,133 @@ body {
 }
 .about-us-text-container p {
   line-height: 25px;
+}
+
+.gallery-section {
+  display: grid;
+  grid-template-rows: min-content min-content;
+}
+.gallery-section .gallery-text-container {
+  padding: 127px 100px 60px 100px;
+  background-color: #8daf3e;
+}
+.gallery-section .gallery-text-container h1 {
+  color: #2d2d2d;
+  font-size: 70px;
+  line-height: 70px;
+}
+.gallery-section .gallery-text-container p {
+  font-weight: 600;
+}
+.gallery-section .gallery-image-container {
+  height: 600px;
+  background-color: white;
+}
+
+.contact-section {
+  background-color: #5f5e5e;
+}
+
+.contact-container {
+  padding: 127px 100px 60px 100px;
+}
+.contact-container h1 {
+  color: #8daf3e;
+  font-size: 70px;
+  line-height: 70px;
+}
+.contact-container p {
+  color: #ffffff;
+}
+
+.form-grid {
+  padding-top: 90px;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two columns: one for labels, one for inputs */
+  gap: 42px 39px; /* Adjust gap between rows and columns */
+  max-width: 900px;
+  align-items: center;
+}
+.form-grid .form-group {
+  display: contents;
+  /* Additional styling for radio buttons */
+}
+.form-grid .form-group label {
+  justify-self: start;
+  padding-right: 10px;
+  color: #8daf3e;
+  font-weight: 600;
+  white-space: nowrap;
+  align-self: center; /* Vertically center the labels */
+}
+.form-grid .form-group input,
+.form-grid .form-group select,
+.form-grid .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(141, 175, 62, 0.3);
+  color: #ffffff;
+  border: 1px solid #8daf3e;
+  align-self: center; /* Vertically center the inputs */
+}
+.form-grid .form-group input::placeholder,
+.form-grid .form-group select::placeholder,
+.form-grid .form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3) !important;
+  font-size: inherit;
+}
+.form-grid .form-group input[type=submit] {
+  padding: 14px 58px;
+  width: fit-content;
+  border: none;
+  border-radius: 45px;
+  background-color: #8daf3e;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 20px;
+}
+.form-grid .form-group input[type=submit]:hover {
+  background-color: #814997;
+  color: #ffffff !important;
+}
+.form-grid .form-group .radio-group {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.form-grid .form-group .radio-group div {
+  display: flex;
+  align-items: center;
+}
+.form-grid .form-group .radio-group label {
+  color: #ffffff !important;
+}
+.form-grid .form-group .radio-group input[type=radio] {
+  margin-right: 13px;
+  margin-left: 0;
+  appearance: none;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px; /* Set a fixed width */
+  height: 20px; /* Set a fixed height */
+  border: 2px solid #8daf3e; /* Add a border to simulate the radio button */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+.form-grid .form-group .radio-group input[type=radio]:checked::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  background-color: #8daf3e;
+  border-radius: 50%;
+  position: absolute; /* Position it absolutely within the radio button */
 }
 
 /*# sourceMappingURL=styles.css.map */

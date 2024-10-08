@@ -12,6 +12,10 @@ body {
   font-size: 20px;
 }
 
+p{
+  color: $font-color-light;
+}
+
 .bg-dark {
   background-color: $background-color-dark;
 }
@@ -134,7 +138,12 @@ body {
     75%,
     rgba(255, 255, 255, 0) 100%
   );
-  background: linear-gradient(to right, #8daf3e 25%, 80%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    to right,
+    #8daf3e 25%,
+    80%,
+    rgba(255, 255, 255, 0) 100%
+  );
   z-index: 0;
 }
 
@@ -143,16 +152,15 @@ body {
 // #region ABOUT US
 .about-us-grid {
   display: grid;
-  min-height: 648px;
   grid-template-columns: 1fr 1fr;
 }
 
 .about-us-image {
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
+  height: 100%;
+  max-height: 100%;
+  background-image: url("../assets/images/photos/about-us.jpg");
+  background-position: 50% 70%;
+  background-size: cover;
 }
 
 .about-us-text-container {
@@ -166,8 +174,152 @@ body {
   p {
     line-height: 25px;
   }
-  color: $font-color-light;
   font-weight: 600;
   padding: 141px 84px 157px 77px;
+}
+// #endregion
+
+// #region Gallery
+.gallery-section {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  .gallery-text-container {
+    padding: 127px 100px 60px 100px;
+    background-color: $primary-color;
+    h1{
+      color: $font-color-dark;
+      font-size: 70px;
+      line-height: 70px;
+    }
+    p{
+      font-weight: 600;
+    }
+  }
+  .gallery-image-container {
+    height: 600px;
+    background-color: white;
+  }
+}
+
+// #endregion
+
+
+// #region CONTACT
+.contact-section {
+  background-color: $background-color-medium-dark;
+}
+
+.contact-container {
+  padding: 127px 100px 60px 100px;
+  h1 {
+    color: $primary-color;
+    font-size: 70px;
+    line-height: 70px;
+  }
+  p {
+    color: $font-color-light;
+  }
+}
+
+.form-grid {
+  padding-top: 90px;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two columns: one for labels, one for inputs */
+  gap: 42px 39px; /* Adjust gap between rows and columns */
+  max-width: 900px;
+  align-items: center;
+
+  .form-group {
+    display: contents;
+
+    label {
+      justify-self: start;
+      padding-right: 10px;
+      color: $primary-color;
+      font-weight: 600;
+      white-space: nowrap;
+      align-self: center; /* Vertically center the labels */
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      background-color: rgba($primary-color, 0.3);
+      color: $font-color-light;
+
+      &::placeholder {
+        color: rgba($font-color-light, 0.3) !important;
+        font-size: inherit;
+      }
+      border: 1px solid $primary-color;
+      align-self: center; /* Vertically center the inputs */
+    }
+
+    // input[type="date"]::placeholder {
+    //   color: rgba($font-color-light, 0.3) !important;
+    //   font-size: inherit;
+    // }
+
+    input[type="submit"] {
+      padding: 14px 58px;
+      width: fit-content;
+      border: none;
+      border-radius: 45px;
+      background-color: $primary-color;
+      color: $font-color-light;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 20px;
+      &:hover {
+        background-color: $secondary-color;
+        color: $font-color-light !important;
+      }
+    }
+
+    /* Additional styling for radio buttons */
+    .radio-group {
+      display: flex;
+      gap: 32px;
+      flex-direction: column;
+      align-items: flex-start;
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+
+      label {
+        color: $font-color-light !important;
+      }
+      input[type="radio"] {
+        margin-right: 13px;
+        margin-left: 0;
+        appearance: none;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px; /* Set a fixed width */
+        height: 20px; /* Set a fixed height */
+        border: 2px solid $primary-color; /* Add a border to simulate the radio button */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+      }
+
+      input[type="radio"]:checked::before {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 50%;
+        background-color: $primary-color;
+        border-radius: 50%;
+        position: absolute; /* Position it absolutely within the radio button */
+      }
+    }
+  }
 }
 // #endregion
