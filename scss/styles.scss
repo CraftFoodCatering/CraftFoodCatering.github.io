@@ -5,16 +5,37 @@ $font-color-dark: #2d2d2d; //dark gray
 $background-color-dark: #2d2d2d; //dark gray
 $background-color-medium-dark: #5f5e5e; //light gray
 
-
-$tablet: 768px;
+$phone: 480px;
+$tablet: 801px;
 $desktop: 1024px;
 $desktopLarge: 1440px;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: $phone) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (max-width: $desktop) {
+      @content;
+    }
+  } @else if $breakpoint == desktopLarge {
+    @media (max-width: $desktopLarge) {
+      @content;
+    }
+  }
+}
 
 body {
   font-family: "Quicksand", sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
 }
 
 p {
@@ -34,14 +55,14 @@ p {
 }
 
 .border-bottom-white {
-  border-bottom: 16px solid $font-color-light;
+  border-bottom: 1rem solid $font-color-light;
 }
 
 .button {
   display: inline-block;
-  padding: 14px 58px;
+  padding: 0.875rem 3.625rem;
   border: none;
-  border-radius: 45px;
+  border-radius: 2.8125rem;
   background-color: $secondary-color;
   color: $font-color-light;
   text-decoration: none;
@@ -58,43 +79,61 @@ p {
 }
 
 .inner-container {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
 }
 // #endregion
 
 // #region NAVIGATION BAR
-.navigation-bar {
-  padding: 25px 0;
-  ul {
-    font-weight: 600;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 959px;
-    width: 100%;
-    li {
-      flex: 1;
-      margin: 0 0;
-    }
 
-    .logo {
+// #region NAVIGATION BAR
+.smartphone-only {
+  display: none;
+}
+
+@include respond-to(phone) {
+  .smartphone-only {
+    display: block;
+  }
+}
+
+.navigation-section {
+  @include respond-to(phone) {
+    display: none;
+  }
+
+  .navigation-bar {
+    padding: 1.5625rem 0;
+    ul {
+      font-weight: 600;
+      text-align: center;
       display: flex;
-      justify-content: center;
-      img {
-        width: 152px;
-        height: auto;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 59.9375rem;
+      width: 100%;
+      li {
+        flex: 1;
+        margin: 0 0;
       }
-    }
 
-    a {
-      text-decoration: none;
-      color: $font-color-light;
-      &:hover {
-        color: $primary-color;
+      .logo {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 9.5rem;
+          height: auto;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: $font-color-light;
+        &:hover {
+          color: $primary-color;
+        }
       }
     }
   }
@@ -104,10 +143,10 @@ p {
 // #region INTRO BANNER
 .intro-banner {
   display: grid;
-  grid-template-columns: 1fr minmax(auto, 1200px) 1fr; /*left margin, inner container, right margin*/
+  grid-template-columns: 1fr minmax(auto, 75rem) 1fr; /*left margin, inner container, right margin*/
   width: 100%;
   background-color: $primary-color;
-  height: 400px;
+  height: 25rem;
 }
 
 .image-section {
@@ -123,10 +162,10 @@ p {
 .text-content {
   grid-column: 2;
   color: $font-color-light;
-  padding-left: 63px;
+  padding-left: 3.9375rem;
   position: relative;
   z-index: 1;
-  max-width: 600px;
+  max-width: 37.5rem;
 }
 
 .image-section:before {
@@ -135,7 +174,7 @@ p {
   left: 0;
   top: 0;
   height: 100%;
-  min-width: 500px;
+  min-width: 31.25rem;
   width: calc(50vw);
   background: linear-gradient(
     to right,
@@ -171,16 +210,16 @@ p {
 .about-us-text-container {
   h1 {
     color: $primary-color;
-    font-size: 70px;
-    line-height: 70px;
+    font-size: 4.375rem;
+    line-height: 4.375rem;
     margin: 0;
     text-transform: uppercase;
   }
   p {
-    line-height: 25px;
+    line-height: 1.5625rem;
   }
   font-weight: 600;
-  padding: 141px 84px 157px 77px;
+  padding: 8.8125rem 5.25rem 9.8125rem 4.8125rem;
 }
 // #endregion
 
@@ -189,19 +228,19 @@ p {
   display: grid;
   grid-template-rows: min-content min-content;
   .gallery-text-container {
-    padding: 127px 100px 60px 100px;
+    padding: 7.9375rem 6.25rem 3.75rem 6.25rem;
     background-color: $primary-color;
     h1 {
       color: $font-color-dark;
-      font-size: 70px;
-      line-height: 70px;
+      font-size: 4.375rem;
+      line-height: 4.375rem;
     }
     p {
       font-weight: 600;
     }
   }
   .gallery-image-container {
-    height: 600px;
+    height: 37.5rem;
     background-color: white;
   }
 }
@@ -214,25 +253,25 @@ p {
 }
 
 .contact-container {
-  padding: 127px 100px 60px 100px;
+  padding: 7.9375rem 6.25rem 3.75rem 6.25rem;
   h1 {
     color: $primary-color;
-    font-size: 70px;
-    line-height: 70px;
+    font-size: 4.375rem;
+    line-height: 4.375rem;
   }
   p {
     color: $font-color-light;
   }
 }
-.form-container{
-  max-width: 900px;
+.form-container {
+  max-width: 56.25rem;
 }
 
 .form-grid {
-  padding-top: 90px;
+  padding-top: 5.625rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 42px 39px;
+  gap: 2.625rem 2.4375rem;
   align-items: center;
 
   .form-group {
@@ -240,7 +279,7 @@ p {
 
     label {
       justify-self: start;
-      padding-right: 10px;
+      padding-right: 0.625rem;
       color: $primary-color;
       font-weight: 600;
       white-space: nowrap;
@@ -250,16 +289,16 @@ p {
     input,
     select,
     textarea {
-      padding: 10px;
+      padding: 0.625rem;
       background-color: rgba($primary-color, 0.3);
       color: $font-color-light;
-      font-size: 16px;
+      font-size: 1rem;
       font-family: inherit;
       &::placeholder {
         color: rgba($font-color-light, 0.3) !important;
         font-size: inherit;
       }
-      border: 1px solid $primary-color;
+      border: 0.0625rem solid $primary-color;
       align-self: center;
     }
 
@@ -268,16 +307,16 @@ p {
     }
 
     input[type="submit"] {
-      padding: 14px 58px;
+      padding: 0.875rem 3.625rem;
       width: fit-content;
       border: none;
-      border-radius: 45px;
+      border-radius: 2.8125rem;
       background-color: $primary-color;
       color: $font-color-light;
       text-decoration: none;
       cursor: pointer;
       font-weight: 400;
-      font-size: 20px;
+      font-size: 1.25rem;
       &:hover {
         background-color: $secondary-color;
         color: $font-color-light !important;
@@ -286,7 +325,7 @@ p {
 
     .radio-group {
       display: flex;
-      gap: 32px;
+      gap: 2rem;
       flex-direction: column;
       align-items: flex-start;
 
@@ -300,7 +339,7 @@ p {
         font-weight: 400;
       }
       input[type="radio"] {
-        margin-right: 13px;
+        margin-right: 0.8125rem;
         margin-left: 0;
         appearance: none;
         border-radius: 50%;
@@ -309,9 +348,9 @@ p {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 20px;
-        height: 20px;
-        border: 1px solid $primary-color;
+        width: 1.25rem;
+        height: 1.25rem;
+        border: 0.0625rem solid $primary-color;
         box-sizing: border-box;
       }
 
@@ -332,7 +371,7 @@ p {
 // #region FOOTER
 .footer-section {
   background-color: $background-color-dark;
-  padding: 40px 0;
+  padding: 2.5rem 0;
 }
 
 .footer-container {
@@ -348,24 +387,24 @@ p {
           color: $primary-color;
         }
       }
-      padding: 6px 0;
+      padding: 0.375rem 0;
     }
     list-style: none;
     padding: 0;
     margin: 0;
   }
   display: grid;
-  padding: 20px 120px 0px 120px;
+  padding: 1.25rem 7.5rem 0rem 7.5rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 20px;
-  max-width: 1200px;
+  gap: 1.25rem;
+  max-width: 75rem;
   margin: 0 auto;
 
   .footer-logo {
     grid-row: span 2;
-    img{
-      margin-top: 30px;
+    img {
+      margin-top: 1.875rem;
     }
   }
 
@@ -386,8 +425,8 @@ p {
 
     .social-icons {
       display: flex;
-      gap: 10px;
-      margin-top: 10px;
+      gap: 0.625rem;
+      margin-top: 0.625rem;
       a:hover {
         img {
           filter: brightness(0) invert(1); /* Macht das Icon weiß */
@@ -400,7 +439,7 @@ p {
     grid-column: 4;
     grid-row: 2;
     p {
-      font-size: 16px;
+      font-size: 1rem;
     }
     align-self: end;
   }

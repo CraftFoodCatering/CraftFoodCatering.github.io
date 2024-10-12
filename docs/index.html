@@ -7,9 +7,33 @@
     <link rel="icon" href="./assets/images/favicon.ico" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/fonts.css" />
+    <link rel="stylesheet" href="styles/hamburger.css" />
+    <meta
+      name="viewport"
+      content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
   </head>
   <body>
-    <div class="section-wrapper bg-dark border-bottom-white">
+    <div role="navigation" class="hamburger-menu smartphone-only">
+      <div id="menuToggle">
+        <input type="checkbox" />
+
+        <!--
+    Some spans to act as a hamburger.
+    -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>About</li></a>
+          <a href="#"><li>Info</li></a>
+          <a href="#"><li>Contact</li></a>
+        </ul>
+      </div>
+    </div>
+    <div class="navigation-section section-wrapper bg-dark border-bottom-white">
       <div class="inner-container">
         <div class="navigation-bar">
           <ul>
@@ -76,44 +100,96 @@
           <form action="/submit_form" method="post" class="form-grid">
             <div class="form-group">
               <label for="date">Datum:</label>
-              <input type="date" id="date" name="date" required placeholder="TT.MM.JJJJ" />
+              <input
+                type="date"
+                id="date"
+                name="date"
+                required
+                placeholder="TT.MM.JJJJ"
+              />
             </div>
             <div class="form-group">
               <label for="guestnumber">Anzahl der Gäste:</label>
-              <input type="number" id="guestnumber" name="guestnumber" required placeholder="z.B. 50" />
+              <input
+                type="number"
+                id="guestnumber"
+                name="guestnumber"
+                required
+                placeholder="z.B. 50"
+              />
             </div>
             <div class="form-group">
               <label for="fullname">Name:</label>
-              <input type="text" id="fullname" name="fullname" required placeholder="Ihr vollständiger Name" />
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                required
+                placeholder="Ihr vollständiger Name"
+              />
             </div>
             <div class="form-group">
               <label for="email">E-Mail:</label>
-              <input type="email" id="email" name="email" required placeholder="Ihre E-Mail-Adresse" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Ihre E-Mail-Adresse"
+              />
             </div>
             <div class="form-group">
               <label for="phone">Telefonnummer:</label>
-              <input type="tel" id="phone" name="phone" required placeholder="Vorwahl und Telefonnummer" />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                placeholder="Vorwahl und Telefonnummer"
+              />
             </div>
             <div class="form-group">
               <label>Wo:</label>
               <div class="radio-group">
                 <div>
-                  <input type="radio" id="indoor" name="location" value="indoor" required />
+                  <input
+                    type="radio"
+                    id="indoor"
+                    name="location"
+                    value="indoor"
+                    required
+                  />
                   <label for="indoor">Innen</label>
                 </div>
                 <div>
-                  <input type="radio" id="outdoor" name="location" value="outdoor" required />
+                  <input
+                    type="radio"
+                    id="outdoor"
+                    name="location"
+                    value="outdoor"
+                    required
+                  />
                   <label for="outdoor">Außen</label>
                 </div>
                 <div>
-                  <input type="radio" id="notsure" name="location" value="notsure" required />
+                  <input
+                    type="radio"
+                    id="notsure"
+                    name="location"
+                    value="notsure"
+                    required
+                  />
                   <label for="notsure">Ich bin mir nicht sicher</label>
                 </div>
               </div>
             </div>
             <div class="form-group">
               <label for="additionalinfo">Weitere Wünsche:</label>
-              <textarea id="additionalinfo" name="additionalinfo" placeholder="Ihre zusätzlichen Wünsche oder Anforderungen"></textarea>
+              <textarea
+                id="additionalinfo"
+                name="additionalinfo"
+                placeholder="Ihre zusätzlichen Wünsche oder Anforderungen"
+              ></textarea>
             </div>
             <div></div>
             <div class="form-group">
@@ -121,7 +197,6 @@
             </div>
           </form>
         </div>
-
       </div>
     </div>
 
@@ -141,7 +216,7 @@
           </ul>
         </div>
         <div class="footer-policies">
-            <h3>&nbsp;</h3>
+          <h3>&nbsp;</h3>
           <ul>
             <li><a href="#">Datenschutz</a></li>
             <li><a href="#">Impressum</a></li>
@@ -151,9 +226,15 @@
         <div class="footer-follow-us">
           <h3>Folgen Sie uns</h3>
           <div class="social-icons">
-            <a href="#"><img src="./assets/images/facebook-icon.svg" alt="Facebook" /></a>
-            <a href="#"><img src="./assets/images/instagram-icon.svg" alt="Instagram" /></a>
-            <a href="#"><img src="./assets/images/linkedin-icon.svg" alt="LinkedIn" /></a>
+            <a href="#"
+              ><img src="./assets/images/facebook-icon.svg" alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/instagram-icon.svg" alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/linkedin-icon.svg" alt="LinkedIn"
+            /></a>
           </div>
         </div>
         <div class="footer-copyright">
