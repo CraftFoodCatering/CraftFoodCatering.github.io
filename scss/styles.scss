@@ -42,6 +42,20 @@ p {
   color: $font-color-light;
 }
 
+
+// #region NAVIGATION BAR
+.smartphone-only {
+  display: none;
+}
+
+@include respond-to(phone) {
+  .smartphone-only {
+    display: block;
+  }
+}
+
+
+
 .bg-dark {
   background-color: $background-color-dark;
 }
@@ -85,18 +99,6 @@ p {
 // #endregion
 
 // #region NAVIGATION BAR
-
-// #region NAVIGATION BAR
-.smartphone-only {
-  display: none;
-}
-
-@include respond-to(phone) {
-  .smartphone-only {
-    display: block;
-  }
-}
-
 .navigation-section {
   @include respond-to(phone) {
     display: none;
@@ -147,6 +149,13 @@ p {
   width: 100%;
   background-color: $primary-color;
   height: 25rem;
+
+  @include respond-to(phone) {
+    display:block;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    height: auto;
+  }
 }
 
 .image-section {
@@ -157,6 +166,47 @@ p {
   position: relative;
   display: flex;
   align-items: center;
+
+  @include respond-to(phone) {
+    background-position: center;
+    flex-direction: column;
+    height: 100dvh;
+    padding: 3.5rem 1.625rem 1.25rem 1.625rem;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    min-width: 31.25rem;
+    width: calc(50vw);
+    background: linear-gradient(
+      to right,
+      #8daf3e 25%,
+      75%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    z-index: 0;
+  
+    @include respond-to(phone) {
+      width: 100%;
+      min-width: auto;
+      height: 28rem;
+      background: linear-gradient(
+        to bottom,
+        $background-color-dark 25%,
+        80%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
+}
+
+.image-content{
+  position: relative;
+  z-index: 1;
 }
 
 .text-content {
@@ -166,29 +216,16 @@ p {
   position: relative;
   z-index: 1;
   max-width: 37.5rem;
-}
 
-.image-section:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  min-width: 31.25rem;
-  width: calc(50vw);
-  background: linear-gradient(
-    to right,
-    #8daf3e 25%,
-    75%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  background: linear-gradient(
-    to right,
-    #8daf3e 25%,
-    80%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  z-index: 0;
+  @include respond-to(phone) {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 1rem;
+    text-align: center;
+    br {
+      display: none;
+    }
+  }
 }
 
 // #endregion
@@ -197,6 +234,10 @@ p {
 .about-us-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @include respond-to(phone) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .about-us-image {
@@ -205,6 +246,11 @@ p {
   background-image: url("../assets/images/photos/about-us.jpg");
   background-position: 50% 70%;
   background-size: cover;
+
+  @include respond-to(phone) {
+    height: 200px;
+    background-position: center;
+  }
 }
 
 .about-us-text-container {
@@ -214,12 +260,27 @@ p {
     line-height: 4.375rem;
     margin: 0;
     text-transform: uppercase;
+
+    @include respond-to(phone) {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      text-align: center;
+    }
   }
   p {
     line-height: 1.5625rem;
+
+    @include respond-to(phone) {
+      padding: 1rem;
+      text-align: center;
+    }
   }
   font-weight: 600;
   padding: 8.8125rem 5.25rem 9.8125rem 4.8125rem;
+
+  @include respond-to(phone) {
+    padding: 2rem 1rem;
+  }
 }
 // #endregion
 
@@ -227,6 +288,11 @@ p {
 .gallery-section {
   display: grid;
   grid-template-rows: min-content min-content;
+
+  @include respond-to(phone) {
+    grid-template-rows: 1fr;
+  }
+
   .gallery-text-container {
     padding: 7.9375rem 6.25rem 3.75rem 6.25rem;
     background-color: $primary-color;
@@ -234,14 +300,33 @@ p {
       color: $font-color-dark;
       font-size: 4.375rem;
       line-height: 4.375rem;
+
+      @include respond-to(phone) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        text-align: center;
+      }
     }
     p {
       font-weight: 600;
+
+      @include respond-to(phone) {
+        padding: 1rem;
+        text-align: center;
+      }
+    }
+
+    @include respond-to(phone) {
+      padding: 2rem 1rem;
     }
   }
   .gallery-image-container {
     height: 37.5rem;
     background-color: white;
+
+    @include respond-to(phone) {
+      height: 200px;
+    }
   }
 }
 
@@ -258,13 +343,32 @@ p {
     color: $primary-color;
     font-size: 4.375rem;
     line-height: 4.375rem;
+
+    @include respond-to(phone) {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      text-align: center;
+    }
   }
   p {
     color: $font-color-light;
+
+    @include respond-to(phone) {
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+
+  @include respond-to(phone) {
+    padding: 2rem 1rem;
   }
 }
 .form-container {
   max-width: 56.25rem;
+
+  @include respond-to(phone) {
+    max-width: 100%;
+  }
 }
 
 .form-grid {
@@ -273,6 +377,11 @@ p {
   grid-template-columns: 1fr 2fr;
   gap: 2.625rem 2.4375rem;
   align-items: center;
+
+  @include respond-to(phone) {
+    grid-template-columns: 1fr;
+    padding-top: 2rem;
+  }
 
   .form-group {
     display: contents;
@@ -284,6 +393,11 @@ p {
       font-weight: 600;
       white-space: nowrap;
       align-self: center;
+
+      @include respond-to(phone) {
+        justify-self: center;
+        padding-right: 0;
+      }
     }
 
     input,
@@ -300,6 +414,10 @@ p {
       }
       border: 0.0625rem solid $primary-color;
       align-self: center;
+
+      @include respond-to(phone) {
+        width: 100%;
+      }
     }
 
     input[type="date"]::-webkit-calendar-picker-indicator {
@@ -321,6 +439,10 @@ p {
         background-color: $secondary-color;
         color: $font-color-light !important;
       }
+
+      @include respond-to(phone) {
+        width: 100%;
+      }
     }
 
     .radio-group {
@@ -328,6 +450,10 @@ p {
       gap: 2rem;
       flex-direction: column;
       align-items: flex-start;
+
+      @include respond-to(phone) {
+        align-items: center;
+      }
 
       div {
         display: flex;
@@ -401,10 +527,19 @@ p {
   max-width: 75rem;
   margin: 0 auto;
 
+  @include respond-to(phone) {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
   .footer-logo {
     grid-row: span 2;
     img {
       margin-top: 1.875rem;
+
+      @include respond-to(phone) {
+        margin-top: 0;
+      }
     }
   }
 
@@ -422,6 +557,12 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include respond-to(phone) {
+      grid-column: 1;
+      grid-row: auto;
+      align-items: center;
+    }
 
     .social-icons {
       display: flex;
@@ -442,6 +583,12 @@ p {
       font-size: 1rem;
     }
     align-self: end;
+
+    @include respond-to(phone) {
+      grid-column: 1;
+      grid-row: auto;
+      text-align: center;
+    }
   }
 }
 // #endregion
