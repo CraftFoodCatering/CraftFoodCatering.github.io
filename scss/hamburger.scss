@@ -1,131 +1,91 @@
-.hamburger-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-#menuToggle {
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
+@import "variables";
 
-  z-index: 1;
-
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle a {
-  text-decoration: none;
-  color: #232323;
-
-  transition: color 0.3s ease;
-}
-
-#menuToggle a:hover {
-  color: tomato;
-}
-
-#menuToggle input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-
+.burger-wrapper {
   cursor: pointer;
-
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-
-  -webkit-touch-callout: none;
+}
+#hamburger-menu-container {
+  background: $primary-color;
+  color: $font-color-light;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  transition-timing-function: cubic-bezier(10, 2, 3, 1);
+  transform: translateX(50rem);
+  top: 0;
+  z-index: 2;
+  transition: 0.5s;
+  text-align: center;
+  img {
+    width: 12rem;
+    margin: 4rem 0 0 0;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    li {
+      padding: 1.5rem 1rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      cursor: pointer;
+      a {
+        color: $font-color-light;
+        text-decoration: none;
+        &:hover {
+          color: $font-color-dark;
+        }
+      }
+    }
+  }
+}
+#hamburger-menu-input {
+  display: none;
 }
 
-#menuToggle span {
-  display: block;
-  width: 33px;
+#hamburger-menu-input:checked ~ #hamburger-menu-container {
+  transform: translateX(0rem);
+}
+
+#burger {
+  position: fixed;
+  z-index: 999;
+  background-color: $primary-color;
+  padding: 20px 20px 20px 25px;
+  border-radius: 2rem 0 0 2rem;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  right: 0;
+  top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#burger > div {
   height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-
-  background: #cdcdcd;
-  border-radius: 3px;
-
-  z-index: 1;
-
-  transform-origin: 4px 0px;
-
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  border-radius: 4px;
+  background-color: $font-color-light;
+  transition: 0.5s;
+  z-index: 999;
 }
 
-#menuToggle span:first-child {
-  transform-origin: 0% 0%;
+#hamburger-menu-input:checked ~ #burger > div {
+  background-color: #fff;
 }
 
-#menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
+#hamburger-menu-input:checked ~ #burger > div:nth-child(1) {
+  transform: translateY(14px) rotate(45deg);
 }
-
-/* 
-  * Transform all the slices of hamburger
-  * into a crossmark.
-  */
-#menuToggle input:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
-  * But let's hide the middle one.
-  */
-#menuToggle input:checked ~ span:nth-last-child(3) {
+#hamburger-menu-input:checked ~ #burger > div:nth-child(2) {
   opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
 }
-
-/*
-  * Ohyeah and the last one should go the other direction
-  */
-#menuToggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
-  * Make this absolute positioned
-  * at the top left of the screen
-  */
-#menu {
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-}
-
-#menu li {
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
-  * And let's slide it in from the left
-  */
-#menuToggle input:checked ~ ul {
-  transform: none;
+#hamburger-menu-input:checked ~ #burger > div:nth-child(3) {
+  transform: translateY(-14px) rotate(-45deg);
 }

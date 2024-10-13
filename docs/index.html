@@ -14,24 +14,24 @@
     />
   </head>
   <body>
-    <div role="navigation" class="hamburger-menu smartphone-only">
-      <div id="menuToggle">
-        <input type="checkbox" />
-
-        <!--
-    Some spans to act as a hamburger.
-    -->
-        <span></span>
-        <span></span>
-        <span></span>
-
-        <ul id="menu">
-          <a href="#"><li>Home</li></a>
-          <a href="#"><li>About</li></a>
-          <a href="#"><li>Info</li></a>
-          <a href="#"><li>Contact</li></a>
+    <div class="smartphone-only">
+      <input type="checkbox" id="hamburger-menu-input">
+      <label id="burger" for="hamburger-menu-input">
+          <div></div>
+          <div></div>
+          <div></div>
+      </label>
+      <nav id="hamburger-menu-container">
+        <img class="nav-logo" src="./assets/images/logo-alt.svg" alt="CraftFood Catering" />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Über uns</a></li>
+          <li><a href="#">Galerie</a></li>
+          <li>
+            <a href="#" class="button">Kontakt</a>
+          </li>
         </ul>
-      </div>
+      </nav>
     </div>
     <div class="navigation-section section-wrapper bg-dark border-bottom-white">
       <div class="inner-container">

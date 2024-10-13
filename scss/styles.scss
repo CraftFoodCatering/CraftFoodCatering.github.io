@@ -1,14 +1,4 @@
-$primary-color: #8daf3e; //green
-$secondary-color: #814997; // purple
-$font-color-light: #ffffff; //white
-$font-color-dark: #2d2d2d; //dark gray
-$background-color-dark: #2d2d2d; //dark gray
-$background-color-medium-dark: #5f5e5e; //light gray
-
-$phone: 480px;
-$tablet: 801px;
-$desktop: 1024px;
-$desktopLarge: 1440px;
+@import "variables";
 
 @mixin respond-to($breakpoint) {
   @if $breakpoint == phone {
