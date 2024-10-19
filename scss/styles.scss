@@ -57,12 +57,12 @@ p {
 
 // #region NAVIGATION BAR
 .smartphone-only {
-  display: none;
+  display: none !important;
 }
 
 @include respond-to(phone) {
   .smartphone-only {
-    display: block;
+    display: block !important;
   }
 }
 
@@ -348,6 +348,18 @@ p {
 
   @include respond-to(phone) {
     max-width: 100%;
+  }
+}
+
+
+.form-group-multi {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: flex-start;
+  gap: 1rem;
+
+  > * {
+    display: block;
   }
 }
 

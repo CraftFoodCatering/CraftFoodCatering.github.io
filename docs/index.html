@@ -15,14 +15,18 @@
   </head>
   <body>
     <div class="smartphone-only">
-      <input type="checkbox" id="hamburger-menu-input">
+      <input type="checkbox" id="hamburger-menu-input" />
       <label id="burger" for="hamburger-menu-input">
-          <div></div>
-          <div></div>
-          <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </label>
       <nav id="hamburger-menu-container">
-        <img class="nav-logo" src="./assets/images/logo-alt.svg" alt="CraftFood Catering" />
+        <img
+          class="nav-logo"
+          src="./assets/images/logo-alt.svg"
+          alt="CraftFood Catering"
+        />
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Über uns</a></li>
@@ -150,6 +154,35 @@
                 required
                 placeholder="Vorwahl und Telefonnummer"
               />
+            </div>
+            <div class="form-group">
+              <label for="street">Straße und Hausnummer:</label>
+              <input
+                type="text"
+                id="street"
+                name="street"
+                required
+                placeholder="Ihre Straße und Hausnummer"
+              />
+            </div>
+            <div class="form-group">
+              <label for="city">Stadt:</label>
+              <div class="form-group-multi">
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  required
+                  placeholder="Ihre Stadt"
+                />
+                <input
+                  type="text"
+                  id="postalcode"
+                  name="postalcode"
+                  required
+                  placeholder="Ihre PLZ"
+                />
+              </div>
             </div>
             <div class="form-group">
               <label>Wo:</label>

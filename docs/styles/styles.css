@@ -12,12 +12,12 @@ p {
 }
 
 .smartphone-only {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 480px) {
   .smartphone-only {
-    display: block;
+    display: block !important;
   }
 }
 .bg-dark {
@@ -332,6 +332,16 @@ p {
   .form-container {
     max-width: 100%;
   }
+}
+
+.form-group-multi {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.form-group-multi > * {
+  display: block;
 }
 
 .form-grid {
