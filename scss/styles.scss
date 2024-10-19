@@ -155,7 +155,7 @@ p {
 // #region INTRO BANNER
 .intro-banner {
   display: grid;
-  grid-template-columns: 1fr minmax(auto, 75rem) 1fr; /*left margin, inner container, right margin*/
+  grid-template-columns: 6.25rem minmax(auto, 75rem) 1fr; /*left margin, inner container, right margin*/
   width: 100%;
   background-color: $primary-color;
   height: 25rem;
@@ -222,7 +222,6 @@ p {
 .text-content {
   grid-column: 2;
   color: $font-color-light;
-  padding-left: 3.9375rem;
   position: relative;
   z-index: 1;
   max-width: 37.5rem;
