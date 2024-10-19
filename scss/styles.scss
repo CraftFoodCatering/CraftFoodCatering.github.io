@@ -412,7 +412,9 @@ p {
       }
       border: 0.0625rem solid $primary-color;
       align-self: center;
-
+    &:focus {
+      outline: 0.075rem solid $primary-color;
+      }
       @include respond-to(phone) {
         width: 100%;
         box-sizing: border-box;

@@ -397,6 +397,11 @@ p {
   color: rgba(255, 255, 255, 0.3) !important;
   font-size: inherit;
 }
+.form-grid .form-group input:focus,
+.form-grid .form-group select:focus,
+.form-grid .form-group textarea:focus {
+  outline: 0.075rem solid #8daf3e;
+}
 @media (max-width: 480px) {
   .form-grid .form-group input,
   .form-grid .form-group select,
