@@ -1,37 +1,60 @@
 @import "variables";
-
 @mixin respond-to($breakpoint) {
   @if $breakpoint == phone {
-    @media (max-width: $phone) {
+    @media (min-width: $phone-min) and (max-width: $phone-max) {
+      body::before {
+        content: "Phone breakpoint";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(255, 0, 0, 0.5);
+        color: white;
+        padding: 0.3125rem;
+        z-index: 9999;
+      }
       @content;
     }
   } @else if $breakpoint == tablet {
-    @media (max-width: $tablet) {
-      @content;
-    }
-  } @else if $breakpoint == desktop {
-    @media (max-width: $desktop) {
-      @content;
-    }
-  } @else if $breakpoint == desktopLarge {
-    @media (max-width: $desktopLarge) {
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      body::before {
+        content: "Tablet breakpoint";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(255, 0, 0, 0.5);
+        color: white;
+        padding: 0.3125rem;
+        z-index: 9999;
+      }
       @content;
     }
   }
 }
 
+@include respond-to(phone) {
+}
+@include respond-to(tablet) {
+}
+
+
+
 @mixin section-heading {
-  font-size: 4.375rem;
-  line-height: 4.375rem;
+  font-size: 3.375rem;
+  line-height: 3.375rem;
   margin: 0;
   text-transform: uppercase;
   @include respond-to(phone) {
-    font-size: 54px;
+    font-size: 3.375rem;
+  }
+
+  @include respond-to(tablet) {
+    font-size: 4.375rem;
+    line-height: 4.375rem;
   }
 }
 
 @mixin section-padding {
-  padding: 78px 53px 48px 53px;
+  padding: 4.875rem 3.3125rem 3rem 3.3125rem;
 }
 
 @mixin p-text {
@@ -41,6 +64,10 @@
   @include respond-to(phone) {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+  @include respond-to(tablet) {
+    font-size: 1rem;
+    line-height: 1.5625rem;
   }
 }
 body {
@@ -155,8 +182,9 @@ p {
 // #region INTRO BANNER
 .intro-banner {
   display: grid;
-  grid-template-columns: 6.25rem minmax(auto, 75rem) 1fr; /*left margin, inner container, right margin*/
   width: 100%;
+  grid-template-columns:  1fr minmax(auto, 61.875rem) 1fr; 
+  
   background-color: $primary-color;
   height: 25rem;
 
@@ -165,6 +193,10 @@ p {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     height: auto;
+  }
+  
+  @include respond-to(tablet) {
+    grid-template-columns: 6.25rem minmax(auto, 75rem) 1fr; /*left margin, inner container, right margin*/
   }
 }
 
@@ -263,7 +295,7 @@ p {
   background-size: cover;
 
   @include respond-to(phone) {
-    min-height: 283px;
+    min-height: 17.6875rem;
     background-position: center;
   }
 }
@@ -295,7 +327,7 @@ p {
   }
 
   .gallery-text-container {
-    padding: 7.9375rem 6.25rem 3.75rem 6.25rem;
+    padding: 7.9375rem 0 3.75rem 0;
     background-color: $primary-color;
     h1 {
       color: $font-color-dark;
@@ -308,13 +340,17 @@ p {
     @include respond-to(phone) {
       @include section-padding;
     }
+
+    @include respond-to(tablet) {
+      padding: 7.9375rem 6.25rem 3.75rem 6.25rem;
+    }
   }
   .gallery-image-container {
     height: 37.5rem;
     background-color: white;
 
     @include respond-to(phone) {
-      height: 200px;
+      height: 12.5rem;
     }
   }
 }
@@ -328,6 +364,9 @@ p {
 
 .contact-container {
   padding: 7.9375rem 6.25rem 3.75rem 6.25rem;
+  margin: 0 auto;
+  max-width: 75rem;
+
   h1 {
     color: $primary-color;
     @include section-heading;
@@ -341,6 +380,9 @@ p {
   @include respond-to(phone) {
     @include section-padding;
   }
+  @include respond-to(tablet) {
+    max-width: initial;
+    }
 }
 .form-container {
   max-width: 56.25rem;
@@ -371,7 +413,7 @@ p {
 
   @include respond-to(phone) {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 1.125rem;
     padding-top: 2rem;
   }
 
@@ -389,12 +431,12 @@ p {
       @include respond-to(phone) {
         justify-self: start;
         padding-right: 0;
-        padding-top: 8px;
+        padding-top: 0.5rem;
       }
     }
 
     textarea {
-      min-height: 222px;
+      min-height: 13.875rem;
     }
 
     input,
@@ -442,7 +484,7 @@ p {
       }
 
       @include respond-to(phone) {
-        width: 250px;
+        width: 15.625rem;
       }
     }
 
@@ -509,7 +551,7 @@ p {
   h3 {
     color: $font-color-light;
     @include respond-to(phone) {
-      margin: 8px 0
+      margin: 0.5rem 0
     }
   }
   ul {
@@ -548,14 +590,14 @@ p {
 
       @include respond-to(phone) {
         margin-top: 0;
-        height: 186px;
+        height: 11.625rem;
       }
     }
     @include respond-to(phone) {
       grid-row: 1;
       text-align: center;
       grid-column: span 3;
-      padding-bottom: 47px;
+      padding-bottom: 2.9375rem;
     }
   }
 

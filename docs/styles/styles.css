@@ -1,4 +1,28 @@
 @charset "UTF-8";
+@media (min-width: 320px) and (max-width: 600px) {
+  body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  body::before {
+    content: "Tablet breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
+}
 body {
   font-family: "Quicksand", sans-serif;
   margin: 0;
@@ -15,7 +39,17 @@ p {
   display: none !important;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
+  body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
   .smartphone-only {
     display: block !important;
   }
@@ -60,9 +94,19 @@ p {
   margin: 0 auto;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .navigation-section {
     display: none;
+  }
+  .navigation-section body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .navigation-section .navigation-bar {
@@ -101,17 +145,42 @@ p {
 
 .intro-banner {
   display: grid;
-  grid-template-columns: 6.25rem minmax(auto, 75rem) 1fr; /*left margin, inner container, right margin*/
   width: 100%;
+  grid-template-columns: 1fr minmax(auto, 61.875rem) 1fr;
   background-color: #8daf3e;
   height: 25rem;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .intro-banner {
     display: block;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     height: auto;
+  }
+  .intro-banner body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .intro-banner {
+    grid-template-columns: 6.25rem minmax(auto, 75rem) 1fr; /*left margin, inner container, right margin*/
+  }
+  .intro-banner body::before {
+    content: "Tablet breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 
@@ -124,12 +193,22 @@ p {
   display: flex;
   align-items: center;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .image-section {
     background-position: center;
     flex-direction: column;
     height: 100dvh;
     padding: 3.5rem 1.625rem 1.25rem 1.625rem;
+  }
+  .image-section body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .image-section:before {
@@ -143,12 +222,22 @@ p {
   background: linear-gradient(to right, #8daf3e 25%, 75%, rgba(255, 255, 255, 0) 100%);
   z-index: 0;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .image-section:before {
     width: 100%;
     min-width: auto;
     height: 28rem;
     background: linear-gradient(to bottom, #2d2d2d 25%, 80%, rgba(255, 255, 255, 0) 100%);
+  }
+  .image-section:before body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 
@@ -164,12 +253,22 @@ p {
   z-index: 1;
   max-width: 37.5rem;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .text-content {
     grid-column: 1;
     grid-row: 2;
     padding: 1rem;
     text-align: center;
+  }
+  .text-content body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
   .text-content br {
     display: none;
@@ -180,9 +279,19 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .about-us-grid {
     grid-template-columns: 1fr;
+  }
+  .about-us-grid body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
   .about-us-grid div:nth-child(1) {
     order: 2;
@@ -199,10 +308,20 @@ p {
   background-position: 50% 70%;
   background-size: cover;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .about-us-image {
-    min-height: 283px;
+    min-height: 17.6875rem;
     background-position: center;
+  }
+  .about-us-image body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 
@@ -211,14 +330,40 @@ p {
 }
 .about-us-text-container h1 {
   color: #8daf3e;
-  font-size: 4.375rem;
-  line-height: 4.375rem;
+  font-size: 3.375rem;
+  line-height: 3.375rem;
   margin: 0;
   text-transform: uppercase;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .about-us-text-container h1 {
-    font-size: 54px;
+    font-size: 3.375rem;
+  }
+  .about-us-text-container h1 body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .about-us-text-container h1 {
+    font-size: 4.375rem;
+    line-height: 4.375rem;
+  }
+  .about-us-text-container h1 body::before {
+    content: "Tablet breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .about-us-text-container p {
@@ -226,15 +371,51 @@ p {
   font-weight: 500;
   font-weight: 600;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .about-us-text-container p {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+  .about-us-text-container p body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
 }
-@media (max-width: 480px) {
+@media (min-width: 601px) and (max-width: 1024px) {
+  .about-us-text-container p {
+    font-size: 1rem;
+    line-height: 1.5625rem;
+  }
+  .about-us-text-container p body::before {
+    content: "Tablet breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
+}
+@media (min-width: 320px) and (max-width: 600px) {
   .about-us-text-container {
-    padding: 78px 53px 48px 53px;
+    padding: 4.875rem 3.3125rem 3rem 3.3125rem;
+  }
+  .about-us-text-container body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 
@@ -242,49 +423,146 @@ p {
   display: grid;
   grid-template-rows: min-content min-content;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .gallery-section {
     grid-template-rows: 1fr;
   }
+  .gallery-section body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
 }
 .gallery-section .gallery-text-container {
-  padding: 7.9375rem 6.25rem 3.75rem 6.25rem;
+  padding: 7.9375rem 0 3.75rem 0;
   background-color: #8daf3e;
 }
 .gallery-section .gallery-text-container h1 {
   color: #2d2d2d;
-  font-size: 4.375rem;
-  line-height: 4.375rem;
+  font-size: 3.375rem;
+  line-height: 3.375rem;
   margin: 0;
   text-transform: uppercase;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .gallery-section .gallery-text-container h1 {
-    font-size: 54px;
+    font-size: 3.375rem;
+  }
+  .gallery-section .gallery-text-container h1 body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .gallery-section .gallery-text-container h1 {
+    font-size: 4.375rem;
+    line-height: 4.375rem;
+  }
+  .gallery-section .gallery-text-container h1 body::before {
+    content: "Tablet breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .gallery-section .gallery-text-container p {
   line-height: 1.5625rem;
   font-weight: 500;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .gallery-section .gallery-text-container p {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+  .gallery-section .gallery-text-container p body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
 }
-@media (max-width: 480px) {
+@media (min-width: 601px) and (max-width: 1024px) {
+  .gallery-section .gallery-text-container p {
+    font-size: 1rem;
+    line-height: 1.5625rem;
+  }
+  .gallery-section .gallery-text-container p body::before {
+    content: "Tablet breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
+}
+@media (min-width: 320px) and (max-width: 600px) {
   .gallery-section .gallery-text-container {
-    padding: 78px 53px 48px 53px;
+    padding: 4.875rem 3.3125rem 3rem 3.3125rem;
+  }
+  .gallery-section .gallery-text-container body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .gallery-section .gallery-text-container {
+    padding: 7.9375rem 6.25rem 3.75rem 6.25rem;
+  }
+  .gallery-section .gallery-text-container body::before {
+    content: "Tablet breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .gallery-section .gallery-image-container {
   height: 37.5rem;
   background-color: white;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .gallery-section .gallery-image-container {
-    height: 200px;
+    height: 12.5rem;
+  }
+  .gallery-section .gallery-image-container body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 
@@ -294,17 +572,45 @@ p {
 
 .contact-container {
   padding: 7.9375rem 6.25rem 3.75rem 6.25rem;
+  margin: 0 auto;
+  max-width: 75rem;
 }
 .contact-container h1 {
   color: #8daf3e;
-  font-size: 4.375rem;
-  line-height: 4.375rem;
+  font-size: 3.375rem;
+  line-height: 3.375rem;
   margin: 0;
   text-transform: uppercase;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .contact-container h1 {
-    font-size: 54px;
+    font-size: 3.375rem;
+  }
+  .contact-container h1 body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .contact-container h1 {
+    font-size: 4.375rem;
+    line-height: 4.375rem;
+  }
+  .contact-container h1 body::before {
+    content: "Tablet breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .contact-container p {
@@ -312,24 +618,85 @@ p {
   line-height: 1.5625rem;
   font-weight: 500;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .contact-container p {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+  .contact-container p body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
 }
-@media (max-width: 480px) {
+@media (min-width: 601px) and (max-width: 1024px) {
+  .contact-container p {
+    font-size: 1rem;
+    line-height: 1.5625rem;
+  }
+  .contact-container p body::before {
+    content: "Tablet breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
+}
+@media (min-width: 320px) and (max-width: 600px) {
   .contact-container {
-    padding: 78px 53px 48px 53px;
+    padding: 4.875rem 3.3125rem 3rem 3.3125rem;
+  }
+  .contact-container body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .contact-container {
+    max-width: initial;
+  }
+  .contact-container body::before {
+    content: "Tablet breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 
 .form-container {
   max-width: 56.25rem;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .form-container {
     max-width: 100%;
+  }
+  .form-container body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 
@@ -350,11 +717,21 @@ p {
   gap: 2.625rem 2.4375rem;
   align-items: center;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .form-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 1.125rem;
     padding-top: 2rem;
+  }
+  .form-grid body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .form-grid .form-group {
@@ -368,15 +745,25 @@ p {
   white-space: nowrap;
   align-self: center;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .form-grid .form-group label {
     justify-self: start;
     padding-right: 0;
-    padding-top: 8px;
+    padding-top: 0.5rem;
+  }
+  .form-grid .form-group label body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .form-grid .form-group textarea {
-  min-height: 222px;
+  min-height: 13.875rem;
 }
 .form-grid .form-group input,
 .form-grid .form-group select,
@@ -401,12 +788,24 @@ p {
 .form-grid .form-group textarea:focus {
   outline: 0.075rem solid #8daf3e;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .form-grid .form-group input,
   .form-grid .form-group select,
   .form-grid .form-group textarea {
     width: 100%;
     box-sizing: border-box;
+  }
+  .form-grid .form-group input body::before,
+  .form-grid .form-group select body::before,
+  .form-grid .form-group textarea body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .form-grid .form-group input[type=date]::-webkit-calendar-picker-indicator {
@@ -428,9 +827,19 @@ p {
   background-color: #814997;
   color: #ffffff !important;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .form-grid .form-group input[type=submit] {
-    width: 250px;
+    width: 15.625rem;
+  }
+  .form-grid .form-group input[type=submit] body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .form-grid .form-group .radio-group {
@@ -439,10 +848,20 @@ p {
   flex-direction: column;
   align-items: flex-start;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .form-grid .form-group .radio-group {
     align-items: flex-start;
     gap: 1rem;
+  }
+  .form-grid .form-group .radio-group body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .form-grid .form-group .radio-group div {
@@ -482,9 +901,19 @@ p {
   background-color: #2d2d2d;
   padding: 3.75rem 0 2.5rem 0;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .footer-section {
-    padding: 78px 53px 48px 53px;
+    padding: 4.875rem 3.3125rem 3rem 3.3125rem;
+  }
+  .footer-section body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 
@@ -500,9 +929,19 @@ p {
 .footer-container h3 {
   color: #ffffff;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .footer-container h3 {
-    margin: 8px 0;
+    margin: 0.5rem 0;
+  }
+  .footer-container h3 body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .footer-container ul {
@@ -520,11 +959,21 @@ p {
 .footer-container ul li a:hover {
   color: #8daf3e;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .footer-container {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2fr 1.5fr 1fr;
     padding: 0;
+  }
+  .footer-container body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .footer-container .footer-logo {
@@ -533,34 +982,74 @@ p {
 .footer-container .footer-logo img {
   margin-top: 1.875rem;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .footer-container .footer-logo img {
     margin-top: 0;
-    height: 186px;
+    height: 11.625rem;
+  }
+  .footer-container .footer-logo img body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .footer-container .footer-logo {
     grid-row: 1;
     text-align: center;
     grid-column: span 3;
-    padding-bottom: 47px;
+    padding-bottom: 2.9375rem;
+  }
+  .footer-container .footer-logo body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .footer-container .footer-nav-menu {
   grid-row: span 2;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .footer-container .footer-nav-menu {
     grid-row: 2;
+  }
+  .footer-container .footer-nav-menu body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .footer-container .footer-policies {
   grid-row: span 2;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .footer-container .footer-policies {
     grid-row: 2;
+  }
+  .footer-container .footer-policies body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .footer-container .footer-follow-us {
@@ -570,10 +1059,20 @@ p {
   flex-direction: column;
   align-items: flex-start;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .footer-container .footer-follow-us {
     grid-row: 2;
     grid-column: auto;
+  }
+  .footer-container .footer-follow-us body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 .footer-container .footer-follow-us .social-icons {
@@ -592,11 +1091,21 @@ p {
 .footer-container .footer-copyright p {
   font-size: 1rem;
 }
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .footer-container .footer-copyright {
     grid-row: 3;
     align-self: start;
     grid-column: span 3;
+  }
+  .footer-container .footer-copyright body::before {
+    content: "Phone breakpoint";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    padding: 0.3125rem;
+    z-index: 9999;
   }
 }
 
