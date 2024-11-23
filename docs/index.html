@@ -14,6 +14,14 @@
     />
   </head>
   <body>
+    <!-- Modal Template -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+  
     <div class="smartphone-only">
       <input type="checkbox" id="hamburger-menu-input" />
       <label id="burger" for="hamburger-menu-input">
@@ -107,66 +115,85 @@
           höchste Qualität und bestes Catering.
         </p>
         <div class="form-container">
-          <form action="/submit_form" method="post" class="form-grid">
+          <!-- <form action="https://formsubmit.co/victor.odukoya@outlook.de" method="post" class="form-grid"> -->
+          <form method="post" class="form-grid">
             <div class="form-group">
               <label for="date">Datum:</label>
-              <input
-                type="date"
-                id="date"
-                name="date"
-                required
-                placeholder="TT.MM.JJJJ"
-              />
+              <div>
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  required
+                  placeholder="TT.MM.JJJJ"
+                />
+                <span class="error-message"></span>
+              </div>
             </div>
             <div class="form-group">
               <label for="guestnumber">Anzahl der Gäste:</label>
-              <input
-                type="number"
-                id="guestnumber"
-                name="guestnumber"
-                required
-                placeholder="z.B. 50"
-              />
+              <div>
+                <input
+                  type="number"
+                  id="guestnumber"
+                  name="guestnumber"
+                  required
+                  placeholder="z.B. 50"
+                />
+                <span class="error-message"></span>
+              </div>
             </div>
             <div class="form-group">
               <label for="fullname">Name:</label>
-              <input
-                type="text"
-                id="fullname"
-                name="fullname"
-                required
-                placeholder="Ihr vollständiger Name"
-              />
+              <div>
+                <input
+                  type="text"
+                  id="fullname"
+                  name="fullname"
+                  required
+                  placeholder="Ihr vollständiger Name oder Unternehmensname"
+                />
+                <span class="error-message"></span>
+              </div>
             </div>
             <div class="form-group">
               <label for="email">E-Mail:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="Ihre E-Mail-Adresse"
-              />
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Ihre E-Mail-Adresse"
+                />
+                <span class="error-message"></span>
+              </div>
             </div>
             <div class="form-group">
               <label for="phone">Telefonnummer:</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                required
-                placeholder="Vorwahl und Telefonnummer"
-              />
+              <div>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="Vorwahl und Telefonnummer"
+                />
+                <span class="error-message"></span>
+              </div>
             </div>
             <div class="form-group">
               <label for="street">Straße und Hausnummer:</label>
-              <input
-                type="text"
-                id="street"
-                name="street"
-                required
-                placeholder="Ihre Straße und Hausnummer"
-              />
+              <div>
+                <input
+                  type="text"
+                  id="street"
+                  name="street"
+                  required
+                  placeholder="Ihre Straße und Hausnummer"
+                />
+                <span class="error-message"></span>
+              </div>
             </div>
             <div class="form-group">
               <label for="city">Stadt:</label>
@@ -185,6 +212,7 @@
                   required
                   placeholder="Ihre PLZ"
                 />
+                <span class="error-message"></span>
               </div>
             </div>
             <div class="form-group">
@@ -220,6 +248,7 @@
                   />
                   <label for="notsure">Ich bin mir nicht sicher</label>
                 </div>
+                <span class="radio-error-message"></span>
               </div>
             </div>
             <div class="form-group">
@@ -232,7 +261,7 @@
             </div>
             <div></div>
             <div class="form-group">
-              <input type="submit" value="Absenden" />
+              <input type="submit"  id="submit-button" value="Absenden" />
             </div>
           </form>
         </div>
@@ -257,9 +286,9 @@
         <div class="footer-policies">
           <h3>&nbsp;</h3>
           <ul>
-            <li><a href="#">Datenschutz</a></li>
-            <li><a href="#">Impressum</a></li>
-            <li><a href="#">AGB</a></li>
+            <li><a href="#" class="modal-link" data-modal="datenschutz.html">Datenschutz</a></li>
+            <li><a href="#" class="modal-link" data-modal="impressum.html">Impressum</a></li>
+            <li><a href="#" class="modal-link" data-modal="agb.html">AGB</a></li>
           </ul>
         </div>
         <div class="footer-follow-us">

@@ -358,6 +358,32 @@ p {
 // #endregion
 
 // #region CONTACT
+
+input:invalid, textarea:invalid {
+  border: 2px solid red;
+}
+
+input:valid, textarea:valid {
+  border: 2px solid green;
+}
+
+.error-message,
+.radio-error-message {
+  color: red;
+  font-size: 0.875rem;
+  display: none;
+}
+
+input:invalid + .error-message,
+textarea:invalid + .error-message {
+  display: block;
+}
+
+.radio-group:has(input:invalid) .radio-error-message {
+  display: block;
+}
+
+
 .contact-section {
   background-color: $background-color-medium-dark;
 }
@@ -442,6 +468,7 @@ p {
     input,
     select,
     textarea {
+      width: 100%;
       padding: 0.625rem;
       background-color: rgba($primary-color, 0.3);
       color: $font-color-light;
@@ -655,3 +682,41 @@ p {
   }
 }
 // #endregion
+
+
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
