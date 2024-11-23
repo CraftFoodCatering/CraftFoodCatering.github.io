@@ -1,28 +1,4 @@
 @charset "UTF-8";
-@media (min-width: 320px) and (max-width: 600px) {
-  body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
-}
-@media (min-width: 601px) and (max-width: 1024px) {
-  body::before {
-    content: "Tablet breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
-}
 body {
   font-family: "Quicksand", sans-serif;
   margin: 0;
@@ -40,16 +16,6 @@ p {
 }
 
 @media (min-width: 320px) and (max-width: 600px) {
-  body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
   .smartphone-only {
     display: block !important;
   }
@@ -97,16 +63,6 @@ p {
 @media (min-width: 320px) and (max-width: 600px) {
   .navigation-section {
     display: none;
-  }
-  .navigation-section body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 .navigation-section .navigation-bar {
@@ -157,30 +113,10 @@ p {
     grid-template-rows: auto auto;
     height: auto;
   }
-  .intro-banner body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .intro-banner {
     grid-template-columns: 6.25rem minmax(auto, 75rem) 1fr; /*left margin, inner container, right margin*/
-  }
-  .intro-banner body::before {
-    content: "Tablet breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 
@@ -200,16 +136,6 @@ p {
     height: 100dvh;
     padding: 3.5rem 1.625rem 1.25rem 1.625rem;
   }
-  .image-section body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 .image-section:before {
   content: "";
@@ -228,16 +154,6 @@ p {
     min-width: auto;
     height: 28rem;
     background: linear-gradient(to bottom, #2d2d2d 25%, 80%, rgba(255, 255, 255, 0) 100%);
-  }
-  .image-section:before body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 
@@ -260,16 +176,6 @@ p {
     padding: 1rem;
     text-align: center;
   }
-  .text-content body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
   .text-content br {
     display: none;
   }
@@ -282,16 +188,6 @@ p {
 @media (min-width: 320px) and (max-width: 600px) {
   .about-us-grid {
     grid-template-columns: 1fr;
-  }
-  .about-us-grid body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
   .about-us-grid div:nth-child(1) {
     order: 2;
@@ -313,16 +209,6 @@ p {
     min-height: 17.6875rem;
     background-position: center;
   }
-  .about-us-image body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 
 .about-us-text-container {
@@ -339,31 +225,11 @@ p {
   .about-us-text-container h1 {
     font-size: 3.375rem;
   }
-  .about-us-text-container h1 body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .about-us-text-container h1 {
     font-size: 4.375rem;
     line-height: 4.375rem;
-  }
-  .about-us-text-container h1 body::before {
-    content: "Tablet breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 .about-us-text-container p {
@@ -376,46 +242,16 @@ p {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  .about-us-text-container p body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .about-us-text-container p {
     font-size: 1rem;
     line-height: 1.5625rem;
   }
-  .about-us-text-container p body::before {
-    content: "Tablet breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 @media (min-width: 320px) and (max-width: 600px) {
   .about-us-text-container {
     padding: 4.875rem 3.3125rem 3rem 3.3125rem;
-  }
-  .about-us-text-container body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 
@@ -426,16 +262,6 @@ p {
 @media (min-width: 320px) and (max-width: 600px) {
   .gallery-section {
     grid-template-rows: 1fr;
-  }
-  .gallery-section body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 .gallery-section .gallery-text-container {
@@ -453,31 +279,11 @@ p {
   .gallery-section .gallery-text-container h1 {
     font-size: 3.375rem;
   }
-  .gallery-section .gallery-text-container h1 body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .gallery-section .gallery-text-container h1 {
     font-size: 4.375rem;
     line-height: 4.375rem;
-  }
-  .gallery-section .gallery-text-container h1 body::before {
-    content: "Tablet breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 .gallery-section .gallery-text-container p {
@@ -489,61 +295,21 @@ p {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  .gallery-section .gallery-text-container p body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .gallery-section .gallery-text-container p {
     font-size: 1rem;
     line-height: 1.5625rem;
   }
-  .gallery-section .gallery-text-container p body::before {
-    content: "Tablet breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 @media (min-width: 320px) and (max-width: 600px) {
   .gallery-section .gallery-text-container {
     padding: 4.875rem 3.3125rem 3rem 3.3125rem;
   }
-  .gallery-section .gallery-text-container body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .gallery-section .gallery-text-container {
     padding: 7.9375rem 6.25rem 3.75rem 6.25rem;
-  }
-  .gallery-section .gallery-text-container body::before {
-    content: "Tablet breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 .gallery-section .gallery-image-container {
@@ -553,16 +319,6 @@ p {
 @media (min-width: 320px) and (max-width: 600px) {
   .gallery-section .gallery-image-container {
     height: 12.5rem;
-  }
-  .gallery-section .gallery-image-container body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 
@@ -610,31 +366,11 @@ textarea:invalid + .error-message {
   .contact-container h1 {
     font-size: 3.375rem;
   }
-  .contact-container h1 body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .contact-container h1 {
     font-size: 4.375rem;
     line-height: 4.375rem;
-  }
-  .contact-container h1 body::before {
-    content: "Tablet breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 .contact-container p {
@@ -647,61 +383,21 @@ textarea:invalid + .error-message {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  .contact-container p body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .contact-container p {
     font-size: 1rem;
     line-height: 1.5625rem;
   }
-  .contact-container p body::before {
-    content: "Tablet breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 @media (min-width: 320px) and (max-width: 600px) {
   .contact-container {
     padding: 4.875rem 3.3125rem 3rem 3.3125rem;
   }
-  .contact-container body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .contact-container {
     max-width: initial;
-  }
-  .contact-container body::before {
-    content: "Tablet breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 
@@ -711,16 +407,6 @@ textarea:invalid + .error-message {
 @media (min-width: 320px) and (max-width: 600px) {
   .form-container {
     max-width: 100%;
-  }
-  .form-container body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 
@@ -747,16 +433,6 @@ textarea:invalid + .error-message {
     gap: 1.125rem;
     padding-top: 2rem;
   }
-  .form-grid body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 .form-grid .form-group {
   display: contents;
@@ -774,16 +450,6 @@ textarea:invalid + .error-message {
     justify-self: start;
     padding-right: 0;
     padding-top: 0.5rem;
-  }
-  .form-grid .form-group label body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 .form-grid .form-group textarea {
@@ -820,18 +486,6 @@ textarea:invalid + .error-message {
     width: 100%;
     box-sizing: border-box;
   }
-  .form-grid .form-group input body::before,
-  .form-grid .form-group select body::before,
-  .form-grid .form-group textarea body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 .form-grid .form-group input[type=date]::-webkit-calendar-picker-indicator {
   filter: invert(1) saturate(5);
@@ -856,16 +510,6 @@ textarea:invalid + .error-message {
   .form-grid .form-group input[type=submit] {
     width: 15.625rem;
   }
-  .form-grid .form-group input[type=submit] body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 .form-grid .form-group .radio-group {
   display: flex;
@@ -877,16 +521,6 @@ textarea:invalid + .error-message {
   .form-grid .form-group .radio-group {
     align-items: flex-start;
     gap: 1rem;
-  }
-  .form-grid .form-group .radio-group body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 .form-grid .form-group .radio-group div {
@@ -930,16 +564,6 @@ textarea:invalid + .error-message {
   .footer-section {
     padding: 4.875rem 3.3125rem 3rem 3.3125rem;
   }
-  .footer-section body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 
 .footer-container {
@@ -957,16 +581,6 @@ textarea:invalid + .error-message {
 @media (min-width: 320px) and (max-width: 600px) {
   .footer-container h3 {
     margin: 0.5rem 0;
-  }
-  .footer-container h3 body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 .footer-container ul {
@@ -990,16 +604,6 @@ textarea:invalid + .error-message {
     grid-template-rows: 2fr 1.5fr 1fr;
     padding: 0;
   }
-  .footer-container body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 .footer-container .footer-logo {
   grid-row: span 2;
@@ -1012,16 +616,6 @@ textarea:invalid + .error-message {
     margin-top: 0;
     height: 11.625rem;
   }
-  .footer-container .footer-logo img body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 @media (min-width: 320px) and (max-width: 600px) {
   .footer-container .footer-logo {
@@ -1029,16 +623,6 @@ textarea:invalid + .error-message {
     text-align: center;
     grid-column: span 3;
     padding-bottom: 2.9375rem;
-  }
-  .footer-container .footer-logo body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 .footer-container .footer-nav-menu {
@@ -1048,16 +632,6 @@ textarea:invalid + .error-message {
   .footer-container .footer-nav-menu {
     grid-row: 2;
   }
-  .footer-container .footer-nav-menu body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
-  }
 }
 .footer-container .footer-policies {
   grid-row: span 2;
@@ -1065,16 +639,6 @@ textarea:invalid + .error-message {
 @media (min-width: 320px) and (max-width: 600px) {
   .footer-container .footer-policies {
     grid-row: 2;
-  }
-  .footer-container .footer-policies body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 .footer-container .footer-follow-us {
@@ -1088,16 +652,6 @@ textarea:invalid + .error-message {
   .footer-container .footer-follow-us {
     grid-row: 2;
     grid-column: auto;
-  }
-  .footer-container .footer-follow-us body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 .footer-container .footer-follow-us .social-icons {
@@ -1121,16 +675,6 @@ textarea:invalid + .error-message {
     grid-row: 3;
     align-self: start;
     grid-column: span 3;
-  }
-  .footer-container .footer-copyright body::before {
-    content: "Phone breakpoint";
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 0.3125rem;
-    z-index: 9999;
   }
 }
 

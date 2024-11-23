@@ -2,30 +2,10 @@
 @mixin respond-to($breakpoint) {
   @if $breakpoint == phone {
     @media (min-width: $phone-min) and (max-width: $phone-max) {
-      body::before {
-        content: "Phone breakpoint";
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: rgba(255, 0, 0, 0.5);
-        color: white;
-        padding: 0.3125rem;
-        z-index: 9999;
-      }
       @content;
     }
   } @else if $breakpoint == tablet {
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-      body::before {
-        content: "Tablet breakpoint";
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: rgba(255, 0, 0, 0.5);
-        color: white;
-        padding: 0.3125rem;
-        z-index: 9999;
-      }
       @content;
     }
   }
