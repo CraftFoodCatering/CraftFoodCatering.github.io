@@ -1,4 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const currentYear = new Date().getFullYear(); // Holt das aktuelle Jahr
+  const yearElement = document.getElementById("current-year");
+
+  if (yearElement) {
+    yearElement.textContent = currentYear.toString(); // Fügt das Jahr in das Span-Element ein
+  }
+
+  const observerOptions: IntersectionObserverInit = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  const fadeUpObserver: IntersectionObserver = new IntersectionObserver(
+    (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry: IntersectionObserverEntry) => {
+        const target = entry.target as HTMLElement;
+
+        if (entry.isIntersecting) {
+          target.classList.add("active");
+        } else {
+          target.classList.remove("active");
+        }
+      });
+    },
+    observerOptions
+  );
+
+  // Selektiere alle Elemente mit der Klasse .fade-in-up
+  const fadeInElements = document.querySelectorAll<HTMLElement>(".fade-in-up");
+  fadeInElements.forEach((el: HTMLElement) => {
+    fadeUpObserver.observe(el);
+  });
+
     const modal = document.getElementById("modal") as HTMLElement | null;
     const modalContent = document.getElementById("modal-body") as HTMLElement | null;
     const closeButton = document.querySelector(".close-button") as HTMLElement | null;

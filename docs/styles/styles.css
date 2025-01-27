@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "../assets/splide/splide.min.css";
 body {
   font-family: "Quicksand", sans-serif;
   margin: 0;
@@ -45,6 +46,7 @@ p {
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .button:hover {
   background-color: #8daf3e;
@@ -97,6 +99,7 @@ p {
 }
 .navigation-section .navigation-bar ul a:hover {
   color: #8daf3e;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .intro-banner {
@@ -322,6 +325,16 @@ p {
   }
 }
 
+input,
+textarea {
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(141, 175, 62, 0.3);
+  border-color: #8daf3e;
+}
+
 input:invalid, textarea:invalid {
   border: 2px solid red;
 }
@@ -496,6 +509,7 @@ textarea:invalid + .error-message {
   border: none;
   border-radius: 2.8125rem;
   background-color: #8daf3e;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
@@ -597,6 +611,7 @@ textarea:invalid + .error-message {
 }
 .footer-container ul li a:hover {
   color: #8daf3e;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 @media (min-width: 320px) and (max-width: 600px) {
   .footer-container {
@@ -712,6 +727,17 @@ textarea:invalid + .error-message {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(50px);
+  color: #ffffff;
+  transition: opacity 0.8s ease, transform 0.8s ease, color 0.8s ease;
+}
+.fade-in-up.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=styles.css.map */

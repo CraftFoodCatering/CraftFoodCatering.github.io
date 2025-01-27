@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CraftFood Catering – Qualität und Service auf höchstem Niveau</title>
+    <title class="fade-in-up">CraftFood Catering – Qualität und Service auf höchstem Niveau</title>
     <link rel="icon" href="./assets/images/favicon.ico" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/fonts.css" />
@@ -70,7 +70,7 @@
           <img src="./assets/images/logo.svg" alt="CraftFood Catering" />
         </div>
         <div class="text-content">
-          <h1>Qualität und Service <br />auf höchstem Niveau.</h1>
+          <h1 class="fade-in-up">Qualität und Service <br />auf höchstem Niveau.</h1>
         </div>
       </div>
     </div>
@@ -78,7 +78,7 @@
     <div class="about-us-grid bg-secondary">
       <div class="about-us-image"></div>
       <div class="about-us-text-container">
-        <h1>Über uns</h1>
+        <h1 class="fade-in-up">Über uns</h1>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -95,7 +95,7 @@
     <div class="gallery-section">
       <div class="gallery-text-container">
         <div class="inner-container">
-          <h1>Galerie</h1>
+          <h1 class="fade-in-up">Galerie</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero,
             impedit consequatur reiciendis, saepe enim numquam sunt laudantium
@@ -105,11 +105,23 @@
         </div>
         
       </div>
-      <div class="gallery-image-container"></div>
+      <div class="gallery-image-container">
+
+        <section class="splide" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">Slide 01</li>
+              <li class="splide__slide">Slide 02</li>
+              <li class="splide__slide">Slide 03</li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
     </div>
     <div class="contact-section">
       <div class="contact-container">
-        <h1>Kontakt</h1>
+        <h1 class="fade-in-up">Kontakt</h1>
         <p>
           Bitte füllen Sie das folgende Formular aus. Wir garantieren Ihnen
           höchste Qualität und bestes Catering.
@@ -288,7 +300,6 @@
           <ul>
             <li><a href="#" class="modal-link" data-modal="datenschutz.html">Datenschutz</a></li>
             <li><a href="#" class="modal-link" data-modal="impressum.html">Impressum</a></li>
-            <li><a href="#" class="modal-link" data-modal="agb.html">AGB</a></li>
           </ul>
         </div>
         <div class="footer-follow-us">
@@ -306,10 +317,11 @@
           </div>
         </div>
         <div class="footer-copyright">
-          <p>&copy; 2024 CraftFood Catering. Alle Rechte vorbehalten.</p>
+          <p>&copy; <span id="current-year"></span> CraftFood Catering. Alle Rechte vorbehalten.</p>
         </div>
       </div>
     </footer>
   </body>
   <script src="scripts/script.js"></script>
+  <script type="module" src="scripts/splide.js"></script>
 </html>

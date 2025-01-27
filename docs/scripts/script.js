@@ -1,5 +1,31 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", function () {
+    const currentYear = new Date().getFullYear(); // Holt das aktuelle Jahr
+    const yearElement = document.getElementById("current-year");
+    if (yearElement) {
+        yearElement.textContent = currentYear.toString(); // Fügt das Jahr in das Span-Element ein
+    }
+    const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+    };
+    const fadeUpObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const target = entry.target;
+            if (entry.isIntersecting) {
+                target.classList.add("active");
+            }
+            else {
+                target.classList.remove("active");
+            }
+        });
+    }, observerOptions);
+    // Selektiere alle Elemente mit der Klasse .fade-in-up
+    const fadeInElements = document.querySelectorAll(".fade-in-up");
+    fadeInElements.forEach((el) => {
+        fadeUpObserver.observe(el);
+    });
     const modal = document.getElementById("modal");
     const modalContent = document.getElementById("modal-body");
     const closeButton = document.querySelector(".close-button");
