@@ -2,8 +2,8 @@
   "name": "craft-food-catering",
   "version": "1.0.0",
   "scripts": {
-    "build:ts": "parcel build ts/main.ts --dist-dir docs/scripts",
-    "watch:ts": "parcel watch ts/main.ts --dist-dir docs/scripts",
+    "build:ts": "parcel build ts/script.ts --dist-dir docs/scripts",
+    "watch:ts": "parcel watch ts/script.ts --dist-dir docs/scripts",
     "start:dev": "npm-run-all --parallel start watch" ,
     "build:css": "sass scss:docs/styles",
     "build": "npm-run-all build:css build:ts",

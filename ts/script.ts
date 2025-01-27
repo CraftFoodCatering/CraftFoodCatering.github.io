@@ -1,4 +1,9 @@
+import Splide from "@splidejs/splide";
+
 document.addEventListener("DOMContentLoaded", function () {
+  const splide = new Splide('.splide');
+  splide.mount();
+
   const currentYear = new Date().getFullYear(); // Holt das aktuelle Jahr
   const yearElement = document.getElementById("current-year");
 
