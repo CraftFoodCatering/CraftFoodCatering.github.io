@@ -186,4 +186,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   
+  const menuLinks = document.querySelectorAll('#hamburger-menu-container a');
+  const hamburgerCheckbox = document.getElementById('hamburger-menu-input') as HTMLInputElement;
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburgerCheckbox.checked = false;
+    });
+  });
 });

@@ -623,6 +623,7 @@ textarea:invalid + .error-message {
   cursor: pointer;
   line-height: 1.4;
   margin: 0;
+  white-space: normal;
 }
 
 .footer-section {
