@@ -348,7 +348,8 @@ input:valid, textarea:valid {
 }
 
 .error-message,
-.radio-error-message {
+.radio-error-message,
+.gdpr-error-message {
   color: red;
   font-size: 0.875rem;
   display: none;
@@ -359,7 +360,8 @@ textarea:invalid + .error-message {
   display: block;
 }
 
-.radio-group:has(input:invalid) .radio-error-message {
+.radio-group:has(input:invalid) .radio-error-message,
+.form-group:has(input:invalid) .gdpr-error-message {
   display: block;
 }
 
@@ -572,6 +574,55 @@ textarea:invalid + .error-message {
   background-color: #8daf3e;
   border-radius: 50%;
   position: absolute;
+}
+.form-grid .form-group .checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-grid .form-group .checkbox-group .gdpr-check {
+  display: flex;
+  align-items: center;
+  gap: 0.8125rem;
+  position: relative;
+  cursor: pointer;
+}
+.form-grid .form-group .checkbox-group .gdpr-check input[type=checkbox] {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 0.0625rem solid #8daf3e;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin: 0;
+}
+.form-grid .form-group .checkbox-group .gdpr-check input[type=checkbox]:checked {
+  background: #8daf3e;
+}
+.form-grid .form-group .checkbox-group .gdpr-check input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.75rem;
+  height: 0.4375rem;
+  border: 0.125rem solid white;
+  border-top: none;
+  box-sizing: border-box;
+  border-right: none;
+  transform: translate(-50%, -60%) rotate(-45deg);
+}
+.form-grid .form-group .checkbox-group .gdpr-check input[type=checkbox]:focus-visible {
+  outline: 2px solid #8daf3e;
+  outline-offset: 2px;
+}
+.form-grid .form-group .checkbox-group .gdpr-check label {
+  color: #ffffff;
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 1.4;
+  margin: 0;
 }
 
 .footer-section {

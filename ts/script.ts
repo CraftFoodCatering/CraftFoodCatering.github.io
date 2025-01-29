@@ -169,4 +169,21 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
+  const gdprCheckbox = form.querySelector('#gdpr') as HTMLInputElement;
+  const gdprErrorMessage = form.querySelector('.gdpr-error-message') as HTMLElement;
+
+  if (gdprCheckbox && gdprErrorMessage) {
+    gdprCheckbox.addEventListener('invalid', () => {
+      if (!gdprCheckbox.checked) {
+        gdprErrorMessage.textContent = 'Bitte akzeptieren Sie die Datenschutzerklärung';
+      }
+    });
+
+    gdprCheckbox.addEventListener('change', () => {
+      gdprCheckbox.setCustomValidity('');
+      gdprErrorMessage.textContent = '';
+    });
+  }
+  
 });

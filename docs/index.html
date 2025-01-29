@@ -2,7 +2,6 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title class="fade-in-up">CraftFood Catering – Qualität und Service auf höchstem Niveau</title>
     <link rel="icon" href="./assets/images/favicon.ico" />
     <link rel="stylesheet" href="styles/styles.css" />
@@ -12,6 +11,19 @@
       name="viewport"
       content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0"
     />
+    <meta name="description" content="CraftFood Catering - Professioneller Catering-Service für Events aller Art. Frische Zutaten, kreative Menükompositionen und erstklassiger Service.">
+    <meta property="og:title" content="CraftFood Catering – Qualität und Service auf höchstem Niveau">
+    <meta property="og:image" content="./assets/images/social-preview.jpg">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "CraftFood Catering",
+        "image": "./assets/images/logo.svg",
+        "telephone": "+49 123 456789",
+        "email": "info@craftfood.de"
+      }
+      </script>
   </head>
   <body id="home">
     <!-- Modal Template -->
@@ -294,6 +306,16 @@
                 name="additionalinfo"
                 placeholder="Ihre zusätzlichen Wünsche oder Anforderungen"
               ></textarea>
+            </div>
+            <div></div>
+            <div class="form-group">
+              <div class="checkbox-group">
+                <div class="gdpr-check">
+                  <input type="checkbox" id="gdpr" required>
+                  <label for="gdpr">Ich stimme der Datenschutzerklärung zu</label>
+                </div>
+                <span class="gdpr-error-message"></span>
+              </div>
             </div>
             <div></div>
             <div class="form-group">
