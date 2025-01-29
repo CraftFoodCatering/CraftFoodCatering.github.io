@@ -52,6 +52,11 @@
     line-height: 1.5625rem;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Quicksand", sans-serif;
   margin: 0;

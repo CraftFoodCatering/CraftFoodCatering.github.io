@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import "../assets/splide/splide.min.css";
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Quicksand", sans-serif;
   margin: 0;

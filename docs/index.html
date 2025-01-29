@@ -13,7 +13,7 @@
       content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0"
     />
   </head>
-  <body>
+  <body id="home">
     <!-- Modal Template -->
   <div id="modal" class="modal">
     <div class="modal-content">
@@ -36,11 +36,11 @@
           alt="CraftFood Catering"
         />
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Über uns</a></li>
-          <li><a href="#">Galerie</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-us">Über uns</a></li>
+          <li><a href="#gallery">Galerie</a></li>
           <li>
-            <a href="#" class="button">Kontakt</a>
+            <a href="#contact" class="button">Kontakt</a>
           </li>
         </ul>
       </nav>
@@ -49,16 +49,16 @@
       <div class="inner-container">
         <div class="navigation-bar">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Über uns</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">Über uns</a></li>
             <li class="logo">
-              <a href="#">
+              <a href="#home">
                 <img src="./assets/images/logo.svg" alt="CraftFood Catering" />
               </a>
             </li>
-            <li><a href="#">Galerie</a></li>
+            <li><a href="#gallery">Galerie</a></li>
             <li>
-              <a href="#" class="button">Kontakt</a>
+              <a href="#contact" class="button">Kontakt</a>
             </li>
           </ul>
         </div>
@@ -75,7 +75,7 @@
       </div>
     </div>
 
-    <div class="about-us-grid bg-secondary">
+    <div class="about-us-grid bg-secondary" id="about-us">
       <div class="about-us-image"></div>
       <div class="about-us-text-container">
         <h1 class="fade-in-up">Über uns</h1>
@@ -92,7 +92,7 @@
         </p>
       </div>
     </div>
-    <div class="gallery-section">
+    <div class="gallery-section" id="gallery">
       <div class="gallery-text-container">
         <div class="inner-container">
           <h1 class="fade-in-up">Galerie</h1>
@@ -143,7 +143,7 @@
 
       </div>
     </div>
-    <div class="contact-section">
+    <div class="contact-section" id="contact">
       <div class="contact-container">
         <h1 class="fade-in-up">Kontakt</h1>
         <p>
@@ -313,10 +313,10 @@
         <div class="footer-nav-menu">
           <h3>Menü</h3>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Über uns</a></li>
-            <li><a href="#">Galerie</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">Über uns</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+            <li><a href="#contact">Kontakt</a></li>
           </ul>
         </div>
         <div class="footer-policies">
