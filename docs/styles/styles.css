@@ -105,6 +105,9 @@ p {
   color: #8daf3e;
   transition: color 0.3s ease, transform 0.3s ease;
 }
+.navigation-section .navigation-bar ul a:visited {
+  color: #ffffff;
+}
 
 .intro-banner {
   display: grid;
@@ -620,6 +623,13 @@ textarea:invalid + .error-message {
   margin: 0;
   white-space: normal;
 }
+.form-grid .form-group .checkbox-group .gdpr-check label a {
+  color: #8daf3e;
+  text-decoration: none;
+}
+.form-grid .form-group .checkbox-group .gdpr-check label a:visited {
+  color: #8daf3e;
+}
 
 .footer-section {
   background-color: #2d2d2d;
@@ -751,15 +761,15 @@ textarea:invalid + .error-message {
   z-index: 1000;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
   background-color: #fff;
-  margin: 15% auto;
+  margin: 30px auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
