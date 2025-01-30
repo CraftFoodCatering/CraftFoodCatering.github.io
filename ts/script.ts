@@ -2,7 +2,7 @@ import Splide from "@splidejs/splide";
 
 document.addEventListener("DOMContentLoaded", function () {
   var thumbnails = new Splide( '#thumbnail-carousel', {
-    width: 'fit-content',
+    width: 'min-content',
     fixedWidth : 80,
     fixedHeight: 80,
     gap        : 10,
@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
       600: {
         fixedWidth : 60,
         fixedHeight: 60,
+        width: 'calc(100vw - 80px)',
+        gap: 5,
       },
     },
   } );
@@ -32,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
     breakpoints: {
       600: {
         perPage: 1,
-        fixedWidth: '80%'
+        fixedWidth: '80%',
+        gap: '10%'
       },
     },
   } );

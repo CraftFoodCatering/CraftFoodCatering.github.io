@@ -142,10 +142,10 @@
       this[globalName] = mainExports;
     }
   }
-})({"1Vrbt":[function(require,module,exports,__globalThis) {
+})({"bJe1f":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
-var HMR_PORT = 61104;
+var HMR_PORT = 65280;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
@@ -601,7 +601,7 @@ var _splide = require("@splidejs/splide");
 var _splideDefault = parcelHelpers.interopDefault(_splide);
 document.addEventListener("DOMContentLoaded", function() {
     var thumbnails = new (0, _splideDefault.default)('#thumbnail-carousel', {
-        width: 'fit-content',
+        width: 'min-content',
         fixedWidth: 80,
         fixedHeight: 80,
         gap: 10,
@@ -612,7 +612,9 @@ document.addEventListener("DOMContentLoaded", function() {
         breakpoints: {
             600: {
                 fixedWidth: 60,
-                fixedHeight: 60
+                fixedHeight: 60,
+                width: 'calc(100vw - 80px)',
+                gap: 5
             }
         }
     });
@@ -630,7 +632,8 @@ document.addEventListener("DOMContentLoaded", function() {
         breakpoints: {
             600: {
                 perPage: 1,
-                fixedWidth: '80%'
+                fixedWidth: '80%',
+                gap: '10%'
             }
         }
     });
@@ -3812,6 +3815,6 @@ var SplideRenderer = /*#__PURE__*/ function() {
     return SplideRenderer;
 }();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1Vrbt","iGCK3"], "iGCK3", "parcelRequire94c2")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["bJe1f","iGCK3"], "iGCK3", "parcelRequire94c2")
 
 //# sourceMappingURL=script.js.map
