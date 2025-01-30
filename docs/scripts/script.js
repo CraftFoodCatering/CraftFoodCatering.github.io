@@ -142,10 +142,10 @@
       this[globalName] = mainExports;
     }
   }
-})({"h5Cnn":[function(require,module,exports,__globalThis) {
+})({"lJlfa":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
-var HMR_PORT = 49917;
+var HMR_PORT = 56484;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
@@ -600,27 +600,43 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _splide = require("@splidejs/splide");
 var _splideDefault = parcelHelpers.interopDefault(_splide);
 document.addEventListener("DOMContentLoaded", function() {
-    var splide = new (0, _splideDefault.default)('#main-carousel', {
+    var thumbnails = new (0, _splideDefault.default)('#thumbnail-carousel', {
+        width: 'fit-content',
+        fixedWidth: 80,
+        fixedHeight: 80,
+        gap: 10,
+        rewind: true,
         pagination: false,
-        height: '300px'
-    });
-    var thumbnails = document.getElementsByClassName('thumbnail');
-    var current;
-    for(var i = 0; i < thumbnails.length; i++)initThumbnail(thumbnails[i], i);
-    function initThumbnail(thumbnail, index) {
-        thumbnail.addEventListener('click', function() {
-            splide.go(index);
-        });
-    }
-    splide.on('mounted move', function() {
-        var thumbnail = thumbnails[splide.index];
-        if (thumbnail) {
-            if (current) current.classList.remove('is-active');
-            thumbnail.classList.add('is-active');
-            current = thumbnail;
+        isNavigation: true,
+        focus: 'center',
+        breakpoints: {
+            600: {
+                fixedWidth: 60,
+                fixedHeight: 60
+            }
         }
     });
-    splide.mount();
+    var main = new (0, _splideDefault.default)('#main-carousel', {
+        type: 'loop',
+        width: '100%',
+        fixedWidth: '30%',
+        focus: 'center',
+        isNavigation: true,
+        gap: 10,
+        perPage: 3,
+        rewind: true,
+        pagination: false,
+        arrows: false,
+        breakpoints: {
+            600: {
+                perPage: 1,
+                fixedWidth: '80%'
+            }
+        }
+    });
+    main.sync(thumbnails);
+    main.mount();
+    thumbnails.mount();
     const currentYear = new Date().getFullYear(); // Holt das aktuelle Jahr
     const yearElement = document.getElementById("current-year");
     if (yearElement) yearElement.textContent = currentYear.toString(); // Fügt das Jahr in das Span-Element ein
@@ -3796,6 +3812,6 @@ var SplideRenderer = /*#__PURE__*/ function() {
     return SplideRenderer;
 }();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["h5Cnn","iGCK3"], "iGCK3", "parcelRequire94c2")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["lJlfa","iGCK3"], "iGCK3", "parcelRequire94c2")
 
 //# sourceMappingURL=script.js.map

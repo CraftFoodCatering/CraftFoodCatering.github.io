@@ -1,38 +1,45 @@
 import Splide from "@splidejs/splide";
 
 document.addEventListener("DOMContentLoaded", function () {
-  var splide = new Splide( '#main-carousel', {
+  var thumbnails = new Splide( '#thumbnail-carousel', {
+    width: 'fit-content',
+    fixedWidth : 80,
+    fixedHeight: 80,
+    gap        : 10,
+    rewind     : true,
+    pagination : false,
+    isNavigation: true,
+    focus      : 'center',
+    breakpoints: {
+      600: {
+        fixedWidth : 60,
+        fixedHeight: 60,
+      },
+    },
+  } );
+
+  var main = new Splide( '#main-carousel', {
+    type: 'loop' ,
+    width: '100%',
+    fixedWidth: '30%',
+    focus      : 'center',
+    isNavigation: true,
+    gap: 10,
+    perPage   : 3,
+    rewind    : true,
     pagination: false,
-    height: '300px',
+    arrows    : false,
+    breakpoints: {
+      600: {
+        perPage: 1,
+        fixedWidth: '80%'
+      },
+    },
   } );
-  
-  var thumbnails = document.getElementsByClassName( 'thumbnail' );
-  var current:any;
-  
-  for ( var i = 0; i < thumbnails.length; i++ ) {
-    initThumbnail( thumbnails[ i ], i );
-  }
-  
-  function initThumbnail( thumbnail:any, index:any ) {
-    thumbnail.addEventListener( 'click', function () {
-      splide.go( index );
-    } );
-  }
-  
-  splide.on( 'mounted move', function () {
-    var thumbnail = thumbnails[ splide.index ];
-  
-    if ( thumbnail ) {
-      if ( current ) {
-        current.classList.remove( 'is-active' );
-      }
-  
-      thumbnail.classList.add( 'is-active' );
-      current = thumbnail;
-    }
-  } );
-  
-  splide.mount();
+
+  main.sync( thumbnails );
+  main.mount();
+  thumbnails.mount();
 
   const currentYear = new Date().getFullYear(); // Holt das aktuelle Jahr
   const yearElement = document.getElementById("current-year");
