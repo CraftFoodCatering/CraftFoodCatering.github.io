@@ -142,10 +142,10 @@
       this[globalName] = mainExports;
     }
   }
-})({"bJe1f":[function(require,module,exports,__globalThis) {
+})({"1Vrbt":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
-var HMR_PORT = 65280;
+var HMR_PORT = 61104;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
@@ -600,46 +600,51 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _splide = require("@splidejs/splide");
 var _splideDefault = parcelHelpers.interopDefault(_splide);
 document.addEventListener("DOMContentLoaded", function() {
-    var thumbnails = new (0, _splideDefault.default)('#thumbnail-carousel', {
-        width: 'min-content',
-        fixedWidth: 80,
-        fixedHeight: 80,
-        gap: 10,
-        rewind: true,
-        pagination: false,
-        isNavigation: true,
-        focus: 'center',
-        breakpoints: {
-            600: {
-                fixedWidth: 60,
-                fixedHeight: 60,
-                width: 'calc(100vw - 80px)',
-                gap: 5
+    // Check if the carousel elements exist before initializing
+    const thumbnailElement = document.getElementById('thumbnail-carousel');
+    const mainCarouselElement = document.getElementById('main-carousel');
+    if (thumbnailElement && mainCarouselElement) {
+        var thumbnails = new (0, _splideDefault.default)('#thumbnail-carousel', {
+            width: 'min-content',
+            fixedWidth: 80,
+            fixedHeight: 80,
+            gap: 10,
+            rewind: true,
+            pagination: false,
+            isNavigation: true,
+            focus: 'center',
+            breakpoints: {
+                600: {
+                    fixedWidth: 60,
+                    fixedHeight: 60,
+                    width: 'calc(100vw - 80px)',
+                    gap: 5
+                }
             }
-        }
-    });
-    var main = new (0, _splideDefault.default)('#main-carousel', {
-        type: 'loop',
-        width: '100%',
-        fixedWidth: '30%',
-        focus: 'center',
-        isNavigation: true,
-        gap: 10,
-        perPage: 3,
-        rewind: true,
-        pagination: false,
-        arrows: false,
-        breakpoints: {
-            600: {
-                perPage: 1,
-                fixedWidth: '80%',
-                gap: '10%'
+        });
+        var main = new (0, _splideDefault.default)('#main-carousel', {
+            type: 'loop',
+            width: '100%',
+            fixedWidth: '30%',
+            focus: 'center',
+            isNavigation: true,
+            gap: 10,
+            perPage: 3,
+            rewind: true,
+            pagination: false,
+            arrows: false,
+            breakpoints: {
+                600: {
+                    perPage: 1,
+                    fixedWidth: '80%',
+                    gap: '10%'
+                }
             }
-        }
-    });
-    main.sync(thumbnails);
-    main.mount();
-    thumbnails.mount();
+        });
+        main.sync(thumbnails);
+        main.mount();
+        thumbnails.mount();
+    }
     const currentYear = new Date().getFullYear(); // Holt das aktuelle Jahr
     const yearElement = document.getElementById("current-year");
     if (yearElement) yearElement.textContent = currentYear.toString(); // Fügt das Jahr in das Span-Element ein
@@ -702,8 +707,7 @@ document.addEventListener("DOMContentLoaded", function() {
         input.addEventListener("input", function() {
             input.setCustomValidity("");
             const errorMessage = input.nextElementSibling;
-            if (!errorMessage.classList.contains("error-message")) return;
-            if (errorMessage) errorMessage.textContent = "";
+            if (errorMessage && errorMessage.classList.contains("error-message")) errorMessage.textContent = "";
         });
     });
     // Custom validation for radio buttons
@@ -711,6 +715,7 @@ document.addEventListener("DOMContentLoaded", function() {
     radioGroups.forEach((group)=>{
         const radios = group.querySelectorAll("input[type='radio']");
         const errorMessage = group.querySelector(".radio-error-message");
+        if (!errorMessage) return;
         radios.forEach((radio)=>{
             radio.addEventListener("invalid", function() {
                 if (!Array.from(radios).some((r)=>r.checked)) errorMessage.textContent = "Bitte w\xe4hlen Sie eine Option.";
@@ -733,7 +738,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     const menuLinks = document.querySelectorAll('#hamburger-menu-container a');
     const hamburgerCheckbox = document.getElementById('hamburger-menu-input');
-    menuLinks.forEach((link)=>{
+    if (hamburgerCheckbox) menuLinks.forEach((link)=>{
         link.addEventListener('click', ()=>{
             hamburgerCheckbox.checked = false;
         });
@@ -3815,6 +3820,6 @@ var SplideRenderer = /*#__PURE__*/ function() {
     return SplideRenderer;
 }();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["bJe1f","iGCK3"], "iGCK3", "parcelRequire94c2")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1Vrbt","iGCK3"], "iGCK3", "parcelRequire94c2")
 
 //# sourceMappingURL=script.js.map

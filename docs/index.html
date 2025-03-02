@@ -2,13 +2,21 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <title class="fade-in-up">
+    <title>
       CraftFood Catering – Qualität und Service auf höchstem Niveau
     </title>
+    <!-- Performance optimizations: preload critical assets -->
+    <link rel="preload" href="./assets/fonts/Quicksand-Regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="./assets/fonts/Quicksand-Bold.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preconnect" href="https://formsubmit.co" />
+    
     <link rel="icon" href="./assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="./assets/images/logo-no-text.svg" />
+    
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/hamburger.css" />
+    
     <meta
       name="viewport"
       content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0"
@@ -22,6 +30,8 @@
       content="CraftFood Catering – Qualität und Service auf höchstem Niveau"
     />
     <meta property="og:image" content="./assets/images/social-preview.jpg" />
+    <meta property="og:description" content="Professioneller Catering-Service für Events aller Art. Frische Zutaten, kreative Menükompositionen und erstklassiger Service." />
+    <link rel="canonical" href="https://www.craftfoodcatering.de" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -55,7 +65,7 @@
 
     <div class="smartphone-only">
       <input type="checkbox" id="hamburger-menu-input" />
-      <label id="burger" for="hamburger-menu-input">
+      <label id="burger" for="hamburger-menu-input" aria-label="Menu">
         <div></div>
         <div></div>
         <div></div>
@@ -148,26 +158,37 @@
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-1.jpeg"
+                  loading="lazy"
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-2.jpeg"
+                  loading="lazy"
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-3.jpeg"
+                  loading="lazy"
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="./assets/images/gallery/gallery-image-4.jpeg"
+                  loading="lazy"
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-5.jpeg"
+                  loading="lazy"
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-6.jpeg"
+                  loading="lazy"
                 />
               </li>
             </ul>
@@ -184,26 +205,37 @@
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-1.jpeg"
+                  loading="lazy"
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-2.jpeg"
+                  loading="lazy"
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-3.jpeg"
+                  loading="lazy"
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="./assets/images/gallery/gallery-image-4.jpeg"
+                  loading="lazy"
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-5.jpeg"
+                  loading="lazy"
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-6.jpeg"
+                  loading="lazy"
                 />
               </li>
             </ul>
@@ -221,7 +253,7 @@
         </p>
         <div class="form-container">
       </div>      
-      <form action="https://formsubmit.co/craft.food@yahoo.de" method="post" class="form-grid">
+          <form action="https://formsubmit.co/craft.food@yahoo.de" method="post" class="form-grid">
           <!-- <form method="post" class="form-grid"> -->
             <div class="form-group">
               <label for="date">Datum:</label>
@@ -444,5 +476,5 @@
       </div>
     </footer>
   </body>
-  <script src="scripts/script.js"></script>
+  <script src="scripts/script.js" defer></script>
 </html>

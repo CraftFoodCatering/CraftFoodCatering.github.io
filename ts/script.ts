@@ -1,48 +1,54 @@
 import Splide from "@splidejs/splide";
 
 document.addEventListener("DOMContentLoaded", function () {
-  var thumbnails = new Splide( '#thumbnail-carousel', {
-    width: 'min-content',
-    fixedWidth : 80,
-    fixedHeight: 80,
-    gap        : 10,
-    rewind     : true,
-    pagination : false,
-    isNavigation: true,
-    focus      : 'center',
-    breakpoints: {
-      600: {
-        fixedWidth : 60,
-        fixedHeight: 60,
-        width: 'calc(100vw - 80px)',
-        gap: 5,
-      },
-    },
-  } );
+  // Check if the carousel elements exist before initializing
+  const thumbnailElement = document.getElementById('thumbnail-carousel');
+  const mainCarouselElement = document.getElementById('main-carousel');
 
-  var main = new Splide( '#main-carousel', {
-    type: 'loop' ,
-    width: '100%',
-    fixedWidth: '30%',
-    focus      : 'center',
-    isNavigation: true,
-    gap: 10,
-    perPage   : 3,
-    rewind    : true,
-    pagination: false,
-    arrows    : false,
-    breakpoints: {
-      600: {
-        perPage: 1,
-        fixedWidth: '80%',
-        gap: '10%'
+  if (thumbnailElement && mainCarouselElement) {
+    var thumbnails = new Splide('#thumbnail-carousel', {
+      width: 'min-content',
+      fixedWidth: 80,
+      fixedHeight: 80,
+      gap: 10,
+      rewind: true,
+      pagination: false,
+      isNavigation: true,
+      focus: 'center',
+      breakpoints: {
+        600: {
+          fixedWidth: 60,
+          fixedHeight: 60,
+          width: 'calc(100vw - 80px)',
+          gap: 5,
+        },
       },
-    },
-  } );
+    });
 
-  main.sync( thumbnails );
-  main.mount();
-  thumbnails.mount();
+    var main = new Splide('#main-carousel', {
+      type: 'loop',
+      width: '100%',
+      fixedWidth: '30%',
+      focus: 'center',
+      isNavigation: true,
+      gap: 10,
+      perPage: 3,
+      rewind: true,
+      pagination: false,
+      arrows: false,
+      breakpoints: {
+        600: {
+          perPage: 1,
+          fixedWidth: '80%',
+          gap: '10%'
+        },
+      },
+    });
+
+    main.sync(thumbnails);
+    main.mount();
+    thumbnails.mount();
+  }
 
   const currentYear = new Date().getFullYear(); // Holt das aktuelle Jahr
   const yearElement = document.getElementById("current-year");
@@ -78,37 +84,37 @@ document.addEventListener("DOMContentLoaded", function () {
     fadeUpObserver.observe(el);
   });
 
-    const modal = document.getElementById("modal") as HTMLElement | null;
-    const modalContent = document.getElementById("modal-body") as HTMLElement | null;
-    const closeButton = document.querySelector(".close-button") as HTMLElement | null;
-  
-    if (modal && modalContent && closeButton) {
-      document.querySelectorAll(".modal-link").forEach((link) => {
-        link.addEventListener("click", function (this: HTMLElement, event: Event) {
-          event.preventDefault();
-          const url = this.getAttribute("data-modal");
-          if (url) {
-            fetch(url)
-              .then((response) => response.text())
-              .then((data) => {
-                modalContent.innerHTML = data;
-                modal.style.display = "block";
-              })
-              .catch((error) => console.error("Error loading modal content:", error));
-          }
-        });
-      });
-  
-      closeButton.addEventListener("click", function () {
-        modal.style.display = "none";
-      });
-  
-      window.addEventListener("click", function (event) {
-        if (event.target === modal) {
-          modal.style.display = "none";
+  const modal = document.getElementById("modal") as HTMLElement | null;
+  const modalContent = document.getElementById("modal-body") as HTMLElement | null;
+  const closeButton = document.querySelector(".close-button") as HTMLElement | null;
+
+  if (modal && modalContent && closeButton) {
+    document.querySelectorAll(".modal-link").forEach((link) => {
+      link.addEventListener("click", function (this: HTMLElement, event: Event) {
+        event.preventDefault();
+        const url = this.getAttribute("data-modal");
+        if (url) {
+          fetch(url)
+            .then((response) => response.text())
+            .then((data) => {
+              modalContent.innerHTML = data;
+              modal.style.display = "block";
+            })
+            .catch((error) => console.error("Error loading modal content:", error));
         }
       });
-    }
+    });
+
+    closeButton.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  }
 
   const form = document.querySelector("form");
   if (!form) return;
@@ -149,9 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("input", function () {
       input.setCustomValidity("");
       const errorMessage = input.nextElementSibling as HTMLElement;
-      if (!errorMessage.classList.contains("error-message")) return;
-
-      if (errorMessage) {
+      if (errorMessage && errorMessage.classList.contains("error-message")) {
         errorMessage.textContent = "";
       }
     });
@@ -166,6 +170,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const errorMessage = group.querySelector(
       ".radio-error-message"
     ) as HTMLElement;
+
+    if (!errorMessage) return;
 
     radios.forEach((radio) => {
       radio.addEventListener("invalid", function () {
@@ -198,9 +204,12 @@ document.addEventListener("DOMContentLoaded", function () {
   
   const menuLinks = document.querySelectorAll('#hamburger-menu-container a');
   const hamburgerCheckbox = document.getElementById('hamburger-menu-input') as HTMLInputElement;
-  menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      hamburgerCheckbox.checked = false;
+  
+  if (hamburgerCheckbox) {
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburgerCheckbox.checked = false;
+      });
     });
-  });
+  }
 });

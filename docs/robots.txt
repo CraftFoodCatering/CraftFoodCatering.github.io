@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.craftfoodcatering.de/sitemap.xml
+
+# Disallow form processing related URLs
+Disallow: /thank-you.html
