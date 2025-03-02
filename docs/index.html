@@ -28,8 +28,19 @@
         "@type": "ProfessionalService",
         "name": "CraftFood Catering",
         "image": "./assets/images/logo.svg",
-        "telephone": "+49 123 456789",
-        "email": "info@craftfood.de"
+        "telephone": "+49 163 6358208",
+        "email": "craft.food@yahoo.de",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Pappelweg 34",
+          "addressLocality": "Bonn",
+          "postalCode": "53177",
+          "addressCountry": "DE"
+        },
+        "url": "https://www.craftfoodcatering.de",
+        "priceRange": "$$",
+        "description": "Professioneller Catering-Service für Events aller Art. Frische Zutaten, kreative Menükompositionen und erstklassiger Service.",
+        "founder": "Pascal Odukoya"
       }
     </script>
   </head>
@@ -102,15 +113,15 @@
       <div class="about-us-text-container">
         <h1 class="fade-in-up">Über uns</h1>
         <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.
+          Willkommen bei CraftFood Catering - Ihrem Partner für exzellente Gastronomie und erstklassigen Service. 
+          Unter der Leitung von Pascal Odukoya bieten wir maßgeschneiderte Catering-Lösungen für jeden Anlass - 
+          von privaten Feiern über Firmenevents bis hin zu Hochzeiten.
+        </p>
+        <p>
+          Unsere Philosophie basiert auf drei Grundpfeilern: hochwertige, frische Zutaten, kreative Menügestaltung 
+          und persönlicher Service. Wir legen großen Wert auf Qualität und Nachhaltigkeit und beziehen unsere 
+          Produkte vorwiegend von lokalen Lieferanten. Jedes Event ist für uns einzigartig, und wir arbeiten eng 
+          mit unseren Kunden zusammen, um ihre Vorstellungen und Wünsche in kulinarische Erlebnisse zu verwandeln.
         </p>
       </div>
     </div>
@@ -119,10 +130,10 @@
         <div class="inner-container">
           <h1 class="fade-in-up">Galerie</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero,
-            impedit consequatur reiciendis, saepe enim numquam sunt laudantium
-            alias iusto odit blanditiis ratione atque ab tempore officia?
-            Repellendus, eligendi. Illum, similique?
+            Entdecken Sie einen Einblick in unsere kulinarische Welt. Unsere Galerie präsentiert eine Auswahl 
+            unserer Kreationen und vermittelt einen Eindruck von der Vielfalt und Qualität, die Sie von uns 
+            erwarten können. Von raffinierten Fingerfood-Variationen über klassische Buffets bis hin zu 
+            exklusiven Menüs - lassen Sie sich inspirieren!
           </p>
         </div>
       </div>
@@ -130,44 +141,33 @@
         <section
           id="main-carousel"
           class="splide"
-          aria-label="My Awesome Gallery"
+          aria-label="CraftFood Catering Galerie"
         >
           <div class="splide__track">
             <ul class="splide__list">
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-1.jpeg"
-                  alt=""
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-2.jpeg"
-                  alt=""
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-3.jpeg"
-                  alt=""
-                />
-              </li>
-              <li class="splide__slide">
-                <img
-                  src="./assets/images/gallery/gallery-image-4.jpeg"
-                  alt=""
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-5.jpeg"
-                  alt=""
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-6.jpeg"
-                  alt=""
                 />
               </li>
             </ul>
@@ -177,44 +177,33 @@
         <section
           id="thumbnail-carousel"
           class="splide"
-          aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel."
+          aria-label="Miniaturansicht Galerie. Durch Auswahl einer Miniaturansicht wird das Hauptbild in der Galerie geändert."
         >
           <div class="splide__track">
             <ul class="splide__list">
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-1.jpeg"
-                  alt=""
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-2.jpeg"
-                  alt=""
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-3.jpeg"
-                  alt=""
-                />
-              </li>
-              <li class="splide__slide">
-                <img
-                  src="./assets/images/gallery/gallery-image-4.jpeg"
-                  alt=""
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-5.jpeg"
-                  alt=""
                 />
               </li>
               <li class="splide__slide">
                 <img
                   src="./assets/images/gallery/gallery-image-6.jpeg"
-                  alt=""
                 />
               </li>
             </ul>
@@ -226,12 +215,14 @@
       <div class="contact-container">
         <h1 class="fade-in-up">Kontakt</h1>
         <p>
-          Bitte füllen Sie das folgende Formular aus. Wir garantieren Ihnen
-          höchste Qualität und bestes Catering.
+          Bitte füllen Sie das folgende Formular aus, um Ihre Anfrage zu stellen. 
+          Wir freuen uns darauf, Ihr Event mit kulinarischen Highlights zu bereichern und 
+          stehen Ihnen für Fragen und individuelle Wünsche gerne zur Verfügung.
         </p>
         <div class="form-container">
-    </div>      <!-- <form action="https://formsubmit.co/victor.odukoya@outlook.de" method="post" class="form-grid"> -->
-          <form method="post" class="form-grid">
+      </div>      
+      <form action="https://formsubmit.co/craft.food@yahoo.de" method="post" class="form-grid">
+          <!-- <form method="post" class="form-grid"> -->
             <div class="form-group">
               <label for="date">Datum:</label>
               <div>
