@@ -605,7 +605,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const mainCarouselElement = document.getElementById('main-carousel');
     if (thumbnailElement && mainCarouselElement) {
         var thumbnails = new (0, _splideDefault.default)('#thumbnail-carousel', {
-            width: 'min-content',
+            width: '90vw',
             fixedWidth: 80,
             fixedHeight: 80,
             gap: 10,

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (thumbnailElement && mainCarouselElement) {
     var thumbnails = new Splide('#thumbnail-carousel', {
-      width: 'min-content',
+      width: '90vw',
       fixedWidth: 80,
       fixedHeight: 80,
       gap: 10,
