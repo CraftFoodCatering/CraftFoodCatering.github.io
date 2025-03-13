@@ -604,6 +604,37 @@ document.addEventListener("DOMContentLoaded", function() {
     const thumbnailElement = document.getElementById('thumbnail-carousel');
     const mainCarouselElement = document.getElementById('main-carousel');
     if (thumbnailElement && mainCarouselElement) {
+        // Function to generate gallery items dynamically
+        const generateGalleryItems = ()=>{
+            const totalImages = 23; // Total number of images in the gallery
+            const mainList = mainCarouselElement.querySelector('.splide__list');
+            const thumbnailList = thumbnailElement.querySelector('.splide__list');
+            // Clear existing items if any
+            mainList.innerHTML = '';
+            thumbnailList.innerHTML = '';
+            // Generate items for both carousels
+            for(let i = 1; i <= totalImages; i++){
+                const imagePath = `./assets/images/gallery/gallery-image-${i}.jpg`;
+                // Create main carousel item
+                const mainSlide = document.createElement('li');
+                mainSlide.className = 'splide__slide';
+                const mainImg = document.createElement('img');
+                mainImg.src = imagePath;
+                mainImg.setAttribute('loading', 'lazy');
+                mainSlide.appendChild(mainImg);
+                mainList.appendChild(mainSlide);
+                // Create thumbnail carousel item
+                const thumbSlide = document.createElement('li');
+                thumbSlide.className = 'splide__slide';
+                const thumbImg = document.createElement('img');
+                thumbImg.src = imagePath;
+                thumbImg.setAttribute('loading', 'lazy');
+                thumbSlide.appendChild(thumbImg);
+                thumbnailList.appendChild(thumbSlide);
+            }
+        };
+        // Generate all gallery items
+        generateGalleryItems();
         var thumbnails = new (0, _splideDefault.default)('#thumbnail-carousel', {
             width: '90vw',
             fixedWidth: 80,
