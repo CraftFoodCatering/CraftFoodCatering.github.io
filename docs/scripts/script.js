@@ -714,6 +714,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.json();
         }).then((data)=>{
             // Show success message
+            console.log(data);
             const formContainer = document.querySelector('.form-container');
             if (formContainer) formContainer.innerHTML = '<div class="success-message"><h2>Vielen Dank!</h2><p>Ihre Anfrage wurde erfolgreich gesendet. Wir werden uns in K\xfcrze bei Ihnen melden.</p></div>';
         }).catch((error)=>{

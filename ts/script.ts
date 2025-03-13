@@ -156,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .then(data => {
       // Show success message
+      console.log(data);
       const formContainer = document.querySelector('.form-container');
       if (formContainer) {
       formContainer.innerHTML = '<div class="success-message"><h2>Vielen Dank!</h2><p>Ihre Anfrage wurde erfolgreich gesendet. Wir werden uns in Kürze bei Ihnen melden.</p></div>';
