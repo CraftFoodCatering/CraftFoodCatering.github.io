@@ -349,10 +349,19 @@ textarea:valid {
 
 .error-message,
 .radio-error-message,
-.gdpr-error-message {
+.gdpr-error-message,
+.form-error-message {
   color: red;
   font-size: 0.875rem;
   display: none;
+}
+
+.form-error-message {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 input:invalid + .error-message,
@@ -363,6 +372,22 @@ textarea:invalid + .error-message {
 .radio-group:has(input:invalid) .radio-error-message,
 .form-group:has(input:invalid) .gdpr-error-message {
   display: block;
+}
+
+.success-message {
+  text-align: left;
+  padding: 3rem 0;
+}
+.success-message h2 {
+  color: #8daf3e;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.success-message p {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 100%;
+  font-weight: 400;
 }
 
 .contact-section {

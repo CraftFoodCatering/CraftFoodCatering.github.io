@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  const form = document.querySelector("form");
+  const form = document.getElementById("contact-form");
   if (!form) return;
 
   const submitButton = document.getElementById(
@@ -124,9 +124,65 @@ document.addEventListener("DOMContentLoaded", function () {
   ) as HTMLInputElement;
 
   form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
     // Disable the submit button and change its text
     submitButton.disabled = true;
     submitButton.value = "Wird gesendet...";
+    
+    // Get form data
+    const formData = new FormData(form as HTMLFormElement);
+    const formObject: Record<string, string> = {};
+    
+    // Convert FormData to JSON object
+    formData.forEach((value, key) => {
+      formObject[key] = value.toString();
+    });
+    
+    // Send data with fetch API
+    fetch("https://formsubmit.co/ajax/info@craftfoodcatering.de", {
+      method: "POST",
+      headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+      },
+      body: JSON.stringify(formObject)
+    })
+    .then(response => {
+      if (!response.ok) {
+      throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Show success message
+      const formContainer = document.querySelector('.form-container');
+      if (formContainer) {
+      formContainer.innerHTML = '<div class="success-message"><h2>Vielen Dank!</h2><p>Ihre Anfrage wurde erfolgreich gesendet. Wir werden uns in Kürze bei Ihnen melden.</p></div>';
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      // Re-enable the submit button in case of error
+      submitButton.disabled = false;
+      submitButton.value = "Absenden";
+      
+      // Remove existing error message if any
+      const existingError = document.querySelector('.form-error-message');
+      if (existingError) {
+      existingError.remove();
+      }
+
+      // Show new error message
+      const errorElement = document.createElement('div');
+      const formContainer = document.querySelector('.form-container');
+
+      errorElement.className = 'form-error-message';
+      errorElement.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.';
+      if(formContainer){
+      formContainer.appendChild(errorElement);
+      }
+    });
   });
 
   const inputs = form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>(
