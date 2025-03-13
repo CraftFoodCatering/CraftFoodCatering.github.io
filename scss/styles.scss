@@ -327,6 +327,14 @@ p {
     p {
       @include p-text;
     }
+    
+    a {
+      text-decoration: underline;
+      color: $font-color-dark;
+      &:visited {
+      color: $font-color-dark;
+      }
+    }
 
     @include respond-to(phone) {
       @include section-padding;

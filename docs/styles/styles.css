@@ -312,6 +312,13 @@ p {
     line-height: 1.5625rem;
   }
 }
+.gallery-section .gallery-text-container a {
+  text-decoration: underline;
+  color: #2d2d2d;
+}
+.gallery-section .gallery-text-container a:visited {
+  color: #2d2d2d;
+}
 @media (min-width: 320px) and (max-width: 600px) {
   .gallery-section .gallery-text-container {
     padding: 4.875rem 3.3125rem 3rem 3.3125rem;
@@ -359,8 +366,8 @@ textarea:valid {
 .form-error-message {
   display: block;
   text-align: center;
-  margin-top: 1rem;
-  font-weight: 500;
+  margin-bottom: 1rem;
+  font-weight: 600;
   font-size: 1rem;
 }
 
