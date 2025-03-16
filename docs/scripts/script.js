@@ -744,10 +744,14 @@ document.addEventListener("DOMContentLoaded", function() {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.json();
         }).then((data)=>{
-            // Show success message
             console.log(data);
             const formContainer = document.querySelector('.form-container');
-            if (formContainer) formContainer.innerHTML = '<div class="success-message"><h2>Vielen Dank!</h2><p>Ihre Anfrage wurde erfolgreich gesendet. Wir werden uns in K\xfcrze bei Ihnen melden.</p></div>';
+            if (formContainer) {
+                if (data.success === "true" || data.success === true) // Show success message
+                formContainer.innerHTML = '<div class="success-message"><h2>Vielen Dank!</h2><p>Ihre Anfrage wurde erfolgreich gesendet. Wir werden uns in K\xfcrze bei Ihnen melden.</p></div>';
+                else // Throw error to handle in catch block
+                throw new Error('Form submission failed');
+            }
         }).catch((error)=>{
             console.error('Error:', error);
             // Re-enable the submit button in case of error

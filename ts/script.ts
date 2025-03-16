@@ -196,11 +196,16 @@ document.addEventListener("DOMContentLoaded", function () {
       return response.json();
     })
     .then(data => {
-      // Show success message
       console.log(data);
       const formContainer = document.querySelector('.form-container');
       if (formContainer) {
-      formContainer.innerHTML = '<div class="success-message"><h2>Vielen Dank!</h2><p>Ihre Anfrage wurde erfolgreich gesendet. Wir werden uns in Kürze bei Ihnen melden.</p></div>';
+        if (data.success === "true" || data.success === true) {
+          // Show success message
+          formContainer.innerHTML = '<div class="success-message"><h2>Vielen Dank!</h2><p>Ihre Anfrage wurde erfolgreich gesendet. Wir werden uns in Kürze bei Ihnen melden.</p></div>';
+        } else {
+          // Throw error to handle in catch block
+          throw new Error('Form submission failed');
+        }
       }
     })
     .catch(error => {
