@@ -733,7 +733,7 @@ document.addEventListener("DOMContentLoaded", function() {
             formObject[key] = value.toString();
         });
         // Send data with fetch API
-        fetch("https://formsubmit.co/ajax/info@craftfoodcatering.de", {
+        fetch("https://formsubmit.co/ajax/15a3c475a65494654e504ddc9c8f8a8d", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
